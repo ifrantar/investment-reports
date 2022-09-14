@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Report sample</title>
+    <style>       
+        {#asset main.css @encoding=utf8}
+    </style>
+</head>
+<body>
+<div class="content__main">
+<!-- Technical Snapshot -->
+{{{pdfCreatePagesGroup title="Technical Snapshot" subtitle="Technical Snapshot as of: " snapshotAsOf=technicalSnapshot.asOf msn=msn today=today}}} {{#each technicalSnapshot.engines}}
+<section class="section pb-4">
+    <h2 class="mb-1">{{this.engineName}}</h2>
+    <div class="section grid grid__col-4">
+        <div class="nugget">
+            <h4>Total Hours</h4>
+            <p class="h2 fw-normal">{{this.totalHours}}</p>
+        </div>
+        <div class="nugget">
+            <h4>Total Cycles</h4>
+            <p class="h2 fw-normal">{{this.totalHours}}</p>
+        </div>
+    </div>
+    <div class="section">
+        {{#each this.modules}}
+        <div class="mb-6">
+            <h3 class="mb-0">{{this.moduleName}}</h3>
+            <table class="table mb-3">
+                {{#if this.lastShopVisitDate}}
+                <tr>
+                    <th class="text-left">Last shop visit date</th>
+                    <td class="text-right">{{this.lastShopVisitDate}}</td>
+                </tr>
+                {{else}} {{/if}}
+                <tr>
+                    <th class="text-left">Hours at last shop visit</th>
+                    <td class="text-right">{{this.lastShopVisitHours}}</td>
+                </tr>
+                <tr>
+                    <th class="text-left">Cycles at last shop visit</th>
+                    <td class="text-right">{{this.lastShopVisitCycles}}</td>
+                </tr>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="w-300"></th>
+                        <th class="text-right">Cycles Remaining</th>
+                        <th class="text-right">Full life (regulatory)</th>
+                        <th class="text-right">Full life (planning)</th>
+                        <th class="text-right">Replacement Cost</th>
+                        <th class="text-right">$ per cycle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each this.llps}}
+                    <tr>
+                        <td>{{this.llpName}}</td>
+                        <td class="text-right">{{this.cyclesRemaining}}</td>
+                        <td class="text-right">{{this.limit}}</td>
+                        <td class="text-right" style="color: red">TO DO</td>
+                        <td class="text-right" style="color: red">TO DO</td>
+                        <td class="text-right" style="color: red">TO DO</td>
+                    </tr>{{/each}}
+                </tbody>
+            </table>
+        </div>
+        {{/each}}
+</section>
+{{/each}}
+
+<div style="page-break-before: always;"></div>
+
+<div style="page-break-before: always;"></div>
+
+{{#each technicalSnapshot.aircraftParts}}
+<section class="section pb-4">
+    <h2 class="mb-1">{{this.partName}}</h2>
+    <div class="section grid grid__col-4">
+        <div class="nugget">
+            <h4 class="mb-1">Total Hours</h4>
+            <p class="h2 fw-normal">{{this.totalHours}}</p>
+        </div>
+        <div class="nugget">
+            <h4 class="mb-1">Total Cycles</h4>
+            <p class="h2 fw-normal">{{this.totalCycles}}</p>
+        </div>
+    </div>
+    <div class="section">
+        {{#each this.checks}}
+        <div class="mb-6">
+            <h3>{{this.checkName}}</h3>
+            <table class="table">
+                <tr>
+                    <th class="text-left">Last check date</th>
+                    <td class="text-right">{{this.lastCheckDate}}</td>
+                </tr>
+                <tr>
+                    <th class="text-left">Hours SLSV</th>
+                    <td class="text-right">{{this.hoursAtLastShopVisit}}</td>
+                </tr>
+                <tr>
+                    <th class="text-left">Cycles SLSV</th>
+                    <td class="text-right">{{this.cyclesAtLastShopVisit}}</td>
+                </tr>
+            </table>
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/each}}
+
+
+<!-- end of technical snapshot -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,408 @@
+{
+    "msn": "1285",
+    "today": "July 15th, 2022",
+    "aircraftDetails": {
+        "airframeSeries": "ATR72-200",
+        "engineSubSeries": "PW127M",
+        "deliveryDate": "2015-12-01",
+        "age": 6.6,
+        "currentOperator": "AirAsia X",
+        "leaseStartDate": "2020-09-28",
+        "leaseEndDate": "2026-09-30"
+    },
+    "contractedLeaseSummary": {
+        "isEol": false,
+        "isHybrid": true,
+        "isMr": false,
+        "cashDeposit": "$1,000,000.00",
+        "letterOfCredit": "$2,000,000.00",
+        "rent": {
+            "fixed": true,
+            "pbh": false,
+            "seasonal": false,
+            "averageRent": "$143,698.63",
+            "maintenanceDeposit": "$150,000.00"
+        },
+        "maintenanceCompensation": {
+            "mr": {
+                "aircraftParts": [{
+                    "partCategoryTitle": "Airframe",
+                    "checkRates": [{
+                        "checkName": "2Y",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Cycle"
+                    }, {
+                        "checkName": "4Y",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Cycle"
+                    }]
+                }, {
+                    "partCategoryTitle": "Landing Gear",
+                    "checkRates": [{
+                        "checkName": "Grouped",
+                        "rate": "$100.00",
+                        "asOf": "2022-01-26",
+                        "escalation": "10%",
+                        "metric": "Hour"
+                    }]
+                }, {
+                    "partCategoryTitle": "Propeller Hub",
+                    "checkRates": [{
+                        "checkName": "Overhaul",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Hour"
+                    }]
+                }, {
+                    "partCategoryTitle": "Propeller Blades",
+                    "checkRates": [{
+                        "checkName": "Overhaul",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Hour"
+                    }]
+                }],
+                "enginePr": [{
+                    "moduleName": "HSI",
+                    "rate": "$145.00 - $168.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "1%",
+                    "metric": "Hour"
+                }, {
+                    "moduleName": "CSI",
+                    "rate": "$122.00 - $134.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "1%",
+                    "metric": "Hour"
+                }, {
+                    "moduleName": "PT Blades",
+                    "rate": "$98.00 - $113.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "1%",
+                    "metric": "Hour"
+                }, {
+                    "moduleName": "RGB OH",
+                    "rate": "$45.00 - $56.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "1%",
+                    "metric": "Hour"
+                }],
+                "engineLlps": [{
+                    "llpName": "Full Stack",
+                    "rate": "$100.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "1%",
+                    "metric": "Cycle"
+                }]
+            },
+            "eol": {
+                "aircraftParts": [{
+                    "partCategoryTitle": "Airframe",
+                    "checkRates": [{
+                        "checkName": "2Y",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Month",
+                        "mirrored": false
+                    }, {
+                        "checkName": "4Y",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Month",
+                        "mirrored": false
+                    }]
+                }, {
+                    "partCategoryTitle": "Propeller Hub",
+                    "checkRates": [{
+                        "checkName": "Overhaul",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Hour",
+                        "mirrored": false
+                    }]
+                }, {
+                    "partCategoryTitle": "Propeller Blades",
+                    "checkRates": [{
+                        "checkName": "Overhaul",
+                        "rate": "$100.00",
+                        "asOf": "2020-01-01",
+                        "escalation": "1%",
+                        "metric": "Hour",
+                        "mirrored": false
+                    }]
+                }],
+                "enginePr": [{
+                    "moduleName": "-",
+                    "rate": "$100.00 - $100.00",
+                    "asOf": "2022-01-26",
+                    "escalation": "10%",
+                    "metric": "Hour",
+                    "mirrored": false
+                }],
+                "engineLlps": [{
+                    "llpName": "Full Stack",
+                    "rate": "$1.00",
+                    "asOf": "2020-01-01",
+                    "escalation": "0%",
+                    "metric": "Cycle",
+                    "mirrored": false
+                }]
+            }
+        }
+    },
+    "technicalSnapshot": {
+        "asOf": "2020-01-01",
+        "aircraftParts": [{
+            "partName": "Airframe",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "1C",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "2C",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "4C",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "2Y",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "4Y",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "8Y",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }, {
+                "checkName": "36000_FC",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Landing Gear - D22698500-8/C",
+            "totalHours": 1395.93,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1395.93",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Landing Gear - D23189000-24/D",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1395.93",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Landing Gear - D23190000-24/D",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1395.93",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Propeller Hub - FR20141117",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Propeller Blades - null",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Propeller Hub - FR20150110",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }, {
+            "partName": "Propeller Blades - null",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "checks": [{
+                "checkName": "OVERHAUL",
+                "lastCheckDate": "N/A",
+                "hoursAtLastShopVisit": "1384.85",
+                "cyclesAtLastShopVisit": "1355"
+            }]
+        }],
+        "engines": [{
+            "engineName": "Engine 1 - PCE-ED1125",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "modules": [{
+                "moduleName": "HSI",
+                "lastShopVisitDate": "2015-07-19",
+                "lastShopVisitCycles": "1355",
+                "lastShopVisitHours": "1384.85",
+                "llps": [{
+                    "llpName": "HPC_IMPELLER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_FRONT_COVER",
+                    "cyclesRemaining": 13457,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_REAR_COVER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_DISK",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "CSI",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "LPC_IMPELLER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "LPT_DISK",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "PT_BLADES",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "PT1_DISK",
+                    "cyclesRemaining": 28641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "PT2_DISK",
+                    "cyclesRemaining": 29977,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "RGB_OH",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "AIR_INLET_SEAL",
+                    "cyclesRemaining": 13324,
+                    "limit": "n/a"
+                }]
+            }]
+        }, {
+            "engineName": "Engine 2 - PCE-ED1124",
+            "totalHours": 1384.85,
+            "totalCycles": 1355,
+            "modules": [{
+                "moduleName": "HSI",
+                "lastShopVisitDate": "2015-07-19",
+                "lastShopVisitCycles": "1355",
+                "lastShopVisitHours": "1384.85",
+                "llps": [{
+                    "llpName": "HPC_IMPELLER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_FRONT_COVER",
+                    "cyclesRemaining": 13457,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_REAR_COVER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "HPT_DISK",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "CSI",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "LPC_IMPELLER",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "LPT_DISK",
+                    "cyclesRemaining": 13641,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "PT_BLADES",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "PT1_DISK",
+                    "cyclesRemaining": 28641,
+                    "limit": "n/a"
+                }, {
+                    "llpName": "PT2_DISK",
+                    "cyclesRemaining": 29977,
+                    "limit": "n/a"
+                }]
+            }, {
+                "moduleName": "RGB_OH",
+                "lastShopVisitDate": "",
+                "lastShopVisitCycles": "0",
+                "lastShopVisitHours": "0",
+                "llps": [{
+                    "llpName": "AIR_INLET_SEAL",
+                    "cyclesRemaining": 13324,
+                    "limit": "n/a"
+                }]
+            }]
+        }]
+    }
+
+}

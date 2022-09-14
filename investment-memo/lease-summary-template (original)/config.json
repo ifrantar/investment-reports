@@ -1,0 +1,22 @@
+{
+    "name": "lease-summary-template (original)",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "data": {
+        "shortid": "Zwo8D0mSm"
+    },
+    "shortid": "kP-dnGPwR",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "4cm",
+        "marginBottom": "1.9cm"
+    },
+    "creationDate": {
+        "$$date": 1662999255574
+    },
+    "modificationDate": {
+        "$$date": 1662999255574
+    },
+    "_id": "b1UYHHC8YJKdfwJJ",
+    "$entitySet": "templates"
+}

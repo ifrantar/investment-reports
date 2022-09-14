@@ -1,0 +1,22 @@
+{
+    "name": "tech-spec-template",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "data": {
+        "shortid": "Zwo8D0mSm"
+    },
+    "shortid": "g8BrpeYqs",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "4cm",
+        "marginBottom": "1.9cm"
+    },
+    "creationDate": {
+        "$$date": 1662999255579
+    },
+    "modificationDate": {
+        "$$date": 1662999255579
+    },
+    "_id": "jWRhoITyrB1SJcZ4",
+    "$entitySet": "templates"
+}

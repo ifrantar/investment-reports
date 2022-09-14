@@ -1,0 +1,375 @@
+{
+  "msn": "1880",
+  "today": "July 11th, 2022",
+  "aircraftParts": [
+    {
+      "partName": "Airframe",
+      "totalHours": 42075.1,
+      "totalCycles": 12408,
+      "checks": [
+        {
+          "checkName": "6_YEAR_CHECK",
+          "lastCheckDate": "2021-05-06",
+          "hoursAtLastShopVisit": 503.1,
+          "cyclesAtLastShopVisit": 145
+        },
+        {
+          "checkName": "12_YEAR_CHECK",
+          "lastCheckDate": "2015-05-12",
+          "hoursAtLastShopVisit": 3571.1,
+          "cyclesAtLastShopVisit": 1129
+        }
+      ]
+    },
+    {
+      "partName": "Landing Gear - B1141",
+      "totalHours": 38953.62,
+      "totalCycles": 11645,
+      "checks": [
+        {
+          "checkName": "GENERIC",
+          "lastCheckDate": "2013-02-25",
+          "hoursAtLastShopVisit": 5793.62,
+          "cyclesAtLastShopVisit": 1901
+        }
+      ]
+    },
+    {
+      "partName": "Landing Gear - MDL1727",
+      "totalHours": 38934.64,
+      "totalCycles": 11638,
+      "checks": [
+        {
+          "checkName": "GENERIC",
+          "lastCheckDate": "2013-02-25",
+          "hoursAtLastShopVisit": 5774.64,
+          "cyclesAtLastShopVisit": 1894
+        }
+      ]
+    },
+    {
+      "partName": "Landing Gear - MDL1727",
+      "totalHours": 38953.62,
+      "totalCycles": 11645,
+      "checks": [
+        {
+          "checkName": "GENERIC",
+          "lastCheckDate": "2013-02-25",
+          "hoursAtLastShopVisit": 5793.62,
+          "cyclesAtLastShopVisit": 1901
+        }
+      ]
+    },
+    {
+      "partName": "APU",
+      "totalHours": 12752,
+      "totalCycles": 20455,
+      "checks": [
+        {
+          "checkName": "GENERIC",
+          "lastCheckDate": "N/A",
+          "hoursAtLastShopVisit": 12752,
+          "cyclesAtLastShopVisit": 20455
+        }
+      ]
+    }
+  ],
+  "engines": [
+    {
+      "engineName": "Engine 1 - V11444",
+      "totalHours": 34447.62,
+      "totalCycles": 12125,
+      "modules": [
+        {
+          "moduleName": "CORE",
+          "lastShopVisitDate": "2009-04-17",
+          "lastShopVisitCycles": 3348,
+          "lastShopVisitHours": 20442,
+          "llps": [
+            {
+              "llpName": "HPC_STG_3_8_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_STG_9_12_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_REAR_SHAFT",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_REAR_ROT_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_HUB",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_OUTER_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_INNER_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_AIRSEAL",
+              "cyclesRemaining": 11590,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_HUB",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_BLADE_RET_PLATE",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            }
+          ]
+        },
+        {
+          "moduleName": "FAN",
+          "lastShopVisitDate": "2009-04-17",
+          "lastShopVisitCycles": 3348,
+          "lastShopVisitHours": 20442,
+          "llps": [
+            { "llpName": "FAN_DISK", "cyclesRemaining": 8242, "limit": "n/a" },
+            {
+              "llpName": "LPC_STUB_SHAFT",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPC_STG_1_5_2_5_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            }
+          ]
+        },
+        {
+          "moduleName": "LPT",
+          "lastShopVisitDate": "2009-04-17",
+          "lastShopVisitCycles": 3348,
+          "lastShopVisitHours": 20442,
+          "llps": [
+            {
+              "llpName": "LPT_STG_3_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_3_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_4_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_4_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_5_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_5_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_INNER_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_7_DISK",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_7_AIRSEAL",
+              "cyclesRemaining": 8242,
+              "limit": "n/a"
+            },
+            { "llpName": "LPT_SHAFT", "cyclesRemaining": 8242, "limit": "n/a" }
+          ]
+        }
+      ]
+    },
+    {
+      "engineName": "Engine 2 - V11438",
+      "totalHours": 32422.1,
+      "totalCycles": 12034,
+      "modules": [
+        {
+          "moduleName": "CORE",
+          "lastShopVisitDate": "2009-04-22",
+          "lastShopVisitCycles": 3143,
+          "lastShopVisitHours": 18062,
+          "llps": [
+            {
+              "llpName": "HPC_STG_3_8_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_STG_9_12_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_REAR_SHAFT",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPC_REAR_ROT_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_HUB",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_OUTER_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_1_INNER_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_HUB",
+              "cyclesRemaining": 11109,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "HPT_STG_2_BLADE_RET_PLATE",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            }
+          ]
+        },
+        {
+          "moduleName": "FAN",
+          "lastShopVisitDate": "2009-04-22",
+          "lastShopVisitCycles": 3143,
+          "lastShopVisitHours": 18062,
+          "llps": [
+            { "llpName": "FAN_DISK", "cyclesRemaining": 7966, "limit": "n/a" },
+            {
+              "llpName": "LPC_STUB_SHAFT",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPC_STG_1_5_2_5_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            }
+          ]
+        },
+        {
+          "moduleName": "LPT",
+          "lastShopVisitDate": "2009-04-22",
+          "lastShopVisitCycles": 3143,
+          "lastShopVisitHours": 18062,
+          "llps": [
+            {
+              "llpName": "LPT_STG_3_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_3_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_4_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_4_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_5_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_5_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_INNER_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_6_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_7_DISK",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            {
+              "llpName": "LPT_STG_7_AIRSEAL",
+              "cyclesRemaining": 7966,
+              "limit": "n/a"
+            },
+            { "llpName": "LPT_SHAFT", "cyclesRemaining": 7966, "limit": "n/a" }
+          ]
+        }
+      ]
+    }
+  ]
+}

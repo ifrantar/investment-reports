@@ -1,0 +1,181 @@
+    <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Report sample</title>
+    <style>       
+        {#asset main.css @encoding=utf8}
+    </style>
+</head>
+<body>
+<div class="content__main">
+    <!-- Transaction summary section -->
+    {{{pdfCreatePagesGroup title="Transaction Summary" subtitle="" msn=msn today=today}}}
+    <div style="page-break-before: always;"></div>
+        <section class="section pb-4">
+            <h2 class="mb-4">Valuation Assumptions</h2>
+            <div class="grid grid__col-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Economic Closing Date</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.economicClosingDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Pricing Method</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.pricingMethod}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Amount</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.amount}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Sale Date</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.saleDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Sale Method</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.saleMethod}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Residual Value</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.valuationAssumptions.residualValue}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="mb-4">Purchase Information</h2>
+            <div class="grid grid__col-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Net Purchase Price</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.netPurchasePrice}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Total MR Balance at ECD</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.totalMrBalanceECD}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Cash Deposit at ECD</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.cashDepositECD}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Lessor Contribution</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.lessorContribution}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Gross Purchase Price</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.grossPurchasePrice}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Interest to Seller</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.interestToSeller}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Purchase Deposit</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.purchaseDeposit}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Deposite Balance at TTD</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.depositBalanceTDD}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">MR Balance at TTD</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.mrBalanceTDD}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Rent to Buyer</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.rentToBuyer}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Final Transfer Amount</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.purchaseInformation.finalTransferAmount}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="mb-4">Financing Assumptions</h2>
+            <div class="grid grid__col-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Loan Name</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.loanName}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Loan Start Date</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.loanStartDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Amount</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.amount}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">All-in Rate</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.allInRate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Term</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.term}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Ballon</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.financingAssumptions.ballon}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="mb-4">Yield Analysis</h2>
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left">Asset IRR</th>
+                    {{#each transactionSummary.yieldAnalysis.assetIRR}}
+                    <th class="text-right">{{this}}</th>
+                    {{/each}}
+                </tr>
+                <tr>
+                    <td style="width:150px">Net Purchase Price</td>
+                    {{#each transactionSummary.yieldAnalysis.netPurchasePrice}}
+                    <td class="text-right">{{this}}</td>
+                    {{/each}}
+                </tr>
+                <tr>
+                    <td>Gross Purchase Price</td>
+                    {{#each transactionSummary.yieldAnalysis.grossPurchasePrice}}
+                    <td class="text-right">{{this}}</td>
+                    {{/each}}
+                </tr>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="mb-4">Net Purchase Price Breakout</h2>
+            <div class="grid grid__col-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Rent</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.rent}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Residual Value</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.residualValue}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Maintenance</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.maintenance}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Cash Deposit</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.cashDeposit}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Transition Costs</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.transitionCosts}}</p>
+                </div class="nugget">
+                <div class="nugget">
+                    <h4 class="mb-1">Fees</h4>
+                    <p class="h2 fw-normal">{{transactionSummary.nppBreakout.fees}}</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- end of Transaction summary section -->
+    </div>
+</body>
+</html>

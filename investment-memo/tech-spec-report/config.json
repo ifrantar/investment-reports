@@ -1,0 +1,50 @@
+{
+    "name": "tech-spec-report",
+    "recipe": "chrome-pdf",
+    "shortid": "8Uquz8_e1",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true,
+        "marginBottom": "1.9cm",
+        "marginTop": "4cm",
+        "marginRight": "",
+        "marginLeft": "",
+        "displayHeaderFooter": false,
+        "format": ""
+    },
+    "pdfOperations": [
+        {
+            "type": "prepend",
+            "mergeWholeDocument": true,
+            "templateShortid": "g8BrpeYqs"
+        },
+        {
+            "type": "merge",
+            "mergeWholeDocument": true,
+            "templateShortid": "lQGhiSc",
+            "enabled": true
+        },
+        {
+            "type": "prepend",
+            "mergeWholeDocument": true,
+            "templateShortid": "3t7WGnV",
+            "enabled": true
+        }
+    ],
+    "creationDate": {
+        "$$date": 1662999255575
+    },
+    "modificationDate": {
+        "$$date": 1662999255575
+    },
+    "data": {
+        "shortid": "Zwo8D0mSm"
+    },
+    "scripts": [
+        {
+            "shortid": "GGF3fKI"
+        }
+    ],
+    "_id": "QG8yPCZugxsXsOuf",
+    "$entitySet": "templates"
+}

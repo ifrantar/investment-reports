@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Report sample</title>
+    <style>    
+        {#asset main.css @encoding=utf8}
+    </style>
+</head>
+<body>
+    <main class="main">
+        
+            <ul class="toc__list">
+                {{#each (tableOfContents $pdf.pages)}}
+                    <li class="toc__item">
+                        <span class="toc__title">{{this.sectionName}}</span>
+                        <span class="toc__spacer"></span>
+                        <span class="toc__page">{{this.firstPageOfSection}}</span>
+                    </li>
+                {{/each}}
+            </ul>
+        
+    </main>        
+</body>
+
+</html>

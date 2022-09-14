@@ -1,0 +1,266 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Report sample</title>
+    <style>       
+        {#asset main.css @encoding=utf8}
+    </style>
+</head>
+<body>
+<div class="content__main">
+    <!-- Contracted lease summary section -->
+    {{{pdfCreatePagesGroup title="Contracted Lease Summary" subtitle="" msn=msn today=today}}}
+    <section class="section">
+            <h2>Fundamentals</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-left">Airframe Series</th>
+                        <th class="text-left">Engine Sub-series</th>
+                        <th class="text-left">Delivery Date</th>
+                        <th class="text-left">Age</th>
+                        <th class="text-left">Current Operator</th>
+                        <th class="text-left">Lease Start Date</th>
+                        <th class="text-left">Lease End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{aircraftDetails.airframeSeries}}</td>
+                        <td>{{aircraftDetails.engineSubSeries}}</td>
+                        <td>{{aircraftDetails.deliveryDate}}</td>
+                        <td>{{aircraftDetails.age}}</td>
+                        <td>{{aircraftDetails.currentOperator}}</td>
+                        <td>{{aircraftDetails.leaseStartDate}}</td>
+                        <td>{{aircraftDetails.leaseEndDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="mb-6">
+                <h2>Security</h2>
+                <table class="table">
+                    <tr>
+                        <th class="text-left">Cash Deposit</th>
+                        <td class="text-right">{{contractedLeaseSummary.cashDeposit}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">Letter of Credit</th>
+                        <td class="text-right">{{contractedLeaseSummary.letterOfCredit}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mb-6">
+                <h2>Rental</h2>
+                <table class="table">
+                    <tr>
+                        <th class="text-left">Fixed</th>
+                        <td class="text-right">{{#if contractedLeaseSummary.rent.fixed}}Yes{{else}}No{{/if}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">PBH</th>
+                        <td class="text-right">{{#if contractedLeaseSummary.rent.pbh}}Yes{{else}}No{{/if}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">Seasonal</th>
+                        <td class="text-right">{{#if contractedLeaseSummary.rent.seasonal}}Yes{{else}}No{{/if}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">Average Rental</th>
+                        <td class="text-right">{{contractedLeaseSummary.rent.averageRent}}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">Mtx Deposit</th>
+                        <td class="text-right">{{contractedLeaseSummary.rent.maintenanceDeposit}}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+        <section class="section">            
+            <h2>Maintenance Compensation</h2>
+            <section class="section mb-3 mt-1 flex-it">
+                <div class="nugget text-center mr-3">
+                    {{#if contractedLeaseSummary.isMr}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.978 11.3722L21.9755 11.3025L21.9755 11.3025L20.978 11.3722ZM11.3721 3.02194L11.3023 2.02438L11.3721 3.02194ZM21.5734 9.10387C21.4139 8.57511 20.856 8.27576 20.3272 8.43524C19.7984 8.59473 19.4991 9.15266 19.6586 9.68142L21.5734 9.10387ZM16.2562 5.22552C16.7236 5.51976 17.341 5.37941 17.6352 4.91203C17.9294 4.44465 17.7891 3.82724 17.3217 3.533L16.2562 5.22552ZM9.207 11.7929C8.81648 11.4024 8.18331 11.4024 7.79279 11.7929C7.40226 12.1834 7.40226 12.8166 7.79279 13.2071L9.207 11.7929ZM10.9999 15L10.2928 15.7071C10.4833 15.8976 10.7427 16.0032 11.0121 15.9999C11.2815 15.9966 11.5382 15.8848 11.724 15.6897L10.9999 15ZM21.724 5.18966C22.1049 4.78973 22.0895 4.15675 21.6896 3.77586C21.2896 3.39498 20.6566 3.41042 20.2758 3.81035L21.724 5.18966ZM19.9804 11.442C20.2886 15.8495 16.9655 19.6723 12.5579 19.9805L12.6974 21.9757C18.2068 21.5904 22.3608 16.8119 21.9755 11.3025L19.9804 11.442ZM12.5579 19.9805C8.15042 20.2887 4.32757 16.9656 4.01937 12.5581L2.02424 12.6976C2.4095 18.207 7.18805 22.3609 12.6974 21.9757L12.5579 19.9805ZM4.01937 12.5581C3.71117 8.15056 7.03432 4.32771 11.4418 4.01951L11.3023 2.02438C5.79292 2.40963 1.63899 7.18819 2.02424 12.6976L4.01937 12.5581ZM19.6586 9.68142C19.8277 10.2421 19.9377 10.831 19.9804 11.442L21.9755 11.3025C21.9223 10.542 21.7852 9.80614 21.5734 9.10387L19.6586 9.68142ZM11.4418 4.01951C13.2036 3.89632 14.8692 4.35232 16.2562 5.22552L17.3217 3.533C15.5875 2.44119 13.5018 1.87058 11.3023 2.02438L11.4418 4.01951ZM7.79279 13.2071L10.2928 15.7071L11.707 14.2929L9.207 11.7929L7.79279 13.2071ZM11.724 15.6897L21.724 5.18966L20.2758 3.81035L10.2758 14.3103L11.724 15.6897Z" fill="#49CC9B"/>
+                    </svg>
+                    {{else}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5L5 19M5 5L19 19" stroke="#CC4961" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                    </svg>
+                    {{/if}}
+                    <h4 class="mb-1">MR</h4>                       
+                </div>
+                <div class="nugget text-center mr-3">
+                    {{#if contractedLeaseSummary.isEol}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.978 11.3722L21.9755 11.3025L21.9755 11.3025L20.978 11.3722ZM11.3721 3.02194L11.3023 2.02438L11.3721 3.02194ZM21.5734 9.10387C21.4139 8.57511 20.856 8.27576 20.3272 8.43524C19.7984 8.59473 19.4991 9.15266 19.6586 9.68142L21.5734 9.10387ZM16.2562 5.22552C16.7236 5.51976 17.341 5.37941 17.6352 4.91203C17.9294 4.44465 17.7891 3.82724 17.3217 3.533L16.2562 5.22552ZM9.207 11.7929C8.81648 11.4024 8.18331 11.4024 7.79279 11.7929C7.40226 12.1834 7.40226 12.8166 7.79279 13.2071L9.207 11.7929ZM10.9999 15L10.2928 15.7071C10.4833 15.8976 10.7427 16.0032 11.0121 15.9999C11.2815 15.9966 11.5382 15.8848 11.724 15.6897L10.9999 15ZM21.724 5.18966C22.1049 4.78973 22.0895 4.15675 21.6896 3.77586C21.2896 3.39498 20.6566 3.41042 20.2758 3.81035L21.724 5.18966ZM19.9804 11.442C20.2886 15.8495 16.9655 19.6723 12.5579 19.9805L12.6974 21.9757C18.2068 21.5904 22.3608 16.8119 21.9755 11.3025L19.9804 11.442ZM12.5579 19.9805C8.15042 20.2887 4.32757 16.9656 4.01937 12.5581L2.02424 12.6976C2.4095 18.207 7.18805 22.3609 12.6974 21.9757L12.5579 19.9805ZM4.01937 12.5581C3.71117 8.15056 7.03432 4.32771 11.4418 4.01951L11.3023 2.02438C5.79292 2.40963 1.63899 7.18819 2.02424 12.6976L4.01937 12.5581ZM19.6586 9.68142C19.8277 10.2421 19.9377 10.831 19.9804 11.442L21.9755 11.3025C21.9223 10.542 21.7852 9.80614 21.5734 9.10387L19.6586 9.68142ZM11.4418 4.01951C13.2036 3.89632 14.8692 4.35232 16.2562 5.22552L17.3217 3.533C15.5875 2.44119 13.5018 1.87058 11.3023 2.02438L11.4418 4.01951ZM7.79279 13.2071L10.2928 15.7071L11.707 14.2929L9.207 11.7929L7.79279 13.2071ZM11.724 15.6897L21.724 5.18966L20.2758 3.81035L10.2758 14.3103L11.724 15.6897Z" fill="#49CC9B"/>
+                    </svg>
+                    {{else}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5L5 19M5 5L19 19" stroke="#CC4961" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                    </svg>
+                    {{/if}}    
+                    <h4 class="mb-1">EOL</h4>                     
+                </div>
+                <div class="nugget text-center mr-3">
+                    {{#if contractedLeaseSummary.isHybrid}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.978 11.3722L21.9755 11.3025L21.9755 11.3025L20.978 11.3722ZM11.3721 3.02194L11.3023 2.02438L11.3721 3.02194ZM21.5734 9.10387C21.4139 8.57511 20.856 8.27576 20.3272 8.43524C19.7984 8.59473 19.4991 9.15266 19.6586 9.68142L21.5734 9.10387ZM16.2562 5.22552C16.7236 5.51976 17.341 5.37941 17.6352 4.91203C17.9294 4.44465 17.7891 3.82724 17.3217 3.533L16.2562 5.22552ZM9.207 11.7929C8.81648 11.4024 8.18331 11.4024 7.79279 11.7929C7.40226 12.1834 7.40226 12.8166 7.79279 13.2071L9.207 11.7929ZM10.9999 15L10.2928 15.7071C10.4833 15.8976 10.7427 16.0032 11.0121 15.9999C11.2815 15.9966 11.5382 15.8848 11.724 15.6897L10.9999 15ZM21.724 5.18966C22.1049 4.78973 22.0895 4.15675 21.6896 3.77586C21.2896 3.39498 20.6566 3.41042 20.2758 3.81035L21.724 5.18966ZM19.9804 11.442C20.2886 15.8495 16.9655 19.6723 12.5579 19.9805L12.6974 21.9757C18.2068 21.5904 22.3608 16.8119 21.9755 11.3025L19.9804 11.442ZM12.5579 19.9805C8.15042 20.2887 4.32757 16.9656 4.01937 12.5581L2.02424 12.6976C2.4095 18.207 7.18805 22.3609 12.6974 21.9757L12.5579 19.9805ZM4.01937 12.5581C3.71117 8.15056 7.03432 4.32771 11.4418 4.01951L11.3023 2.02438C5.79292 2.40963 1.63899 7.18819 2.02424 12.6976L4.01937 12.5581ZM19.6586 9.68142C19.8277 10.2421 19.9377 10.831 19.9804 11.442L21.9755 11.3025C21.9223 10.542 21.7852 9.80614 21.5734 9.10387L19.6586 9.68142ZM11.4418 4.01951C13.2036 3.89632 14.8692 4.35232 16.2562 5.22552L17.3217 3.533C15.5875 2.44119 13.5018 1.87058 11.3023 2.02438L11.4418 4.01951ZM7.79279 13.2071L10.2928 15.7071L11.707 14.2929L9.207 11.7929L7.79279 13.2071ZM11.724 15.6897L21.724 5.18966L20.2758 3.81035L10.2758 14.3103L11.724 15.6897Z" fill="#49CC9B"/>
+                    </svg>
+                    {{else}}
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 5L5 19M5 5L19 19" stroke="#CC4961" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                    </svg>
+                    {{/if}} 
+                    <h4 class="mb-1">Hybrid</h4>
+                </div>
+            </section>
+            {{#if contractedLeaseSummary.maintenanceCompensation.mr}}
+            <h2>MR</h2>
+            {{#each contractedLeaseSummary.maintenanceCompensation.mr.aircraftParts}}
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">{{this.partCategoryTitle}}</th>
+                    <th class="text-right">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                </tr>
+                {{#each this.checkRates}}
+                <tr>
+                    <td class="">{{this.checkName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>
+            {{/each}}
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">Engine PR</th>
+                    <th class="text-right w-200">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                </tr>
+                {{#each contractedLeaseSummary.maintenanceCompensation.mr.enginePr}}
+                <tr>
+                    <td class="w-200">{{this.moduleName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">Engine LLPs</th>
+                    <th class="text-right w-200">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                </tr>
+                {{#each contractedLeaseSummary.maintenanceCompensation.mr.engineLlps}}
+                <tr>
+                    <td style="w-200">{{this.llpName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>      
+            {{/if}}
+
+            {{#if contractedLeaseSummary.maintenanceCompensation.eol}}
+            <h2>EOL</h2>
+            {{#each contractedLeaseSummary.maintenanceCompensation.eol.aircraftParts}}
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">{{this.partCategoryTitle}}</th>
+                    <th class="text-right w-200">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                    <th class="text-right">Mirrored</th>
+                </tr>
+                {{#each this.checkRates}}
+                <tr>
+                    <td style="width:150px">{{this.checkName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>
+            {{/each}}
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">Engine PR</th>
+                    <th class="text-right w-200">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                    <th class="text-right">Mirrored</th>
+                </tr>
+                {{#each contractedLeaseSummary.maintenanceCompensation.eol.enginePr}}
+                <tr>
+                    <td style="width:150px">{{this.moduleName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>
+            <div class="section__sub-1">
+            <table class="table">
+                <tr>
+                    <th class="table__h3 text-left w-200">Engine LLPs</th>
+                    <th class="text-right w-200">Rate</th>
+                    <th class="text-right">As of date</th>
+                    <th class="text-right">Escalation</th>
+                    <th class="text-right">Metric</th>
+                    <th class="text-right">Mirrored</th>
+                </tr>
+                {{#each contractedLeaseSummary.maintenanceCompensation.eol.engineLlps}}
+                <tr>
+                    <td style="width:150px">{{this.llpName}}</td>
+                    <td class="text-right">{{this.rate}}</td>
+                    <td class="text-right">{{this.asOf}}</td>
+                    <td class="text-right">{{this.escalation}}</td>
+                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>      
+            {{/if}}     
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+    <!-- End of Contracted lease summary -->
+</div>
+</body>
+</html>

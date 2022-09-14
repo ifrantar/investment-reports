@@ -1,0 +1,22 @@
+{
+    "name": "transaction-summary-template",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "data": {
+        "shortid": "Zwo8D0mSm"
+    },
+    "shortid": "anRxWZ-7R",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "4cm",
+        "marginBottom": "1.9cm"
+    },
+    "creationDate": {
+        "$$date": 1662999255576
+    },
+    "modificationDate": {
+        "$$date": 1662999255576
+    },
+    "_id": "I7HqsIT43dplIOHq",
+    "$entitySet": "templates"
+}
