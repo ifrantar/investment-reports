@@ -151,8 +151,6 @@ li {
     justify-content: space-between;
     max-width: 100%;
     height: 100%;
-    /* margin-left: 40px;
-    margin-right: 40px; */
 }
 
 .header {
@@ -396,10 +394,33 @@ h3, .h3 {
     letter-spacing: -1px;
 }
 
+.cover__aircraft-details {
+    position:absolute;
+    top:338px;
+    left:100px;
+    display: flex;
+    font-size: var(--h2);
+}
+
+    .cover__aircraft-details div {
+        margin-right:28px;
+    }
+
+    .cover__aircraft-details__title {
+        text-transform: uppercase;
+        color:var(--grey-80);
+        margin-bottom:var(--smaller);
+        font-size: var(--h3) ;
+    }
+
+    .cover__aircraft-details__bold {
+        font-weight: var(--fw-bold);
+    }
+
 .cover__divide-line {
     width:100px;
     position: absolute;
-    top:310px;
+    top:410px;
     left:102px;
     display:block;
     border-top:7px solid var(--brand-blue);
@@ -407,7 +428,7 @@ h3, .h3 {
 
 .cover__h2 {
     position: absolute;
-    top:340px;
+    top:430px;
     left:100px;
     font-size: 60px;
     letter-spacing: -1px;
@@ -415,7 +436,7 @@ h3, .h3 {
 
 .cover__date {
     position: absolute;
-    top:480px;
+    top:580px;
     left:100px;
     font-size: var(--h1);
 }
@@ -450,7 +471,7 @@ body {
 }
 
 .nugget__in-table .nugget {
-    margin-right:50px;
+    margin-right:56px;
 }
 
 

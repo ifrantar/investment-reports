@@ -41,9 +41,19 @@
         </svg>
 
         <h1 class="cover__h1">MSN {{msn}}</h1>
-        
+        <div class="cover__aircraft-details">
+            <div>
+                <p class="cover__aircraft-details__title">Airframe Series</p>
+                <p class="cover__aircraft-details__bold">A330-300E</p>
+            </div>
+            <div>
+                <p class="cover__aircraft-details__title">Engine Sub Series</p>
+                <p class="cover__aircraft-details__bold">Trent 772B-60EP</p>
+            </div>
+        </div>
+        <div class="cover__divide-line">&nbsp;</div>
         <h2 class="cover__h2">{{getReportName $pdf.pages}}</h2>
-        <p class="cover__date">{{today}}</p>       
+        <p class="cover__date">{{today}}</p>      
     </main>
         
 </body>
