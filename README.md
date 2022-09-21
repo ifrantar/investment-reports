@@ -7,6 +7,8 @@ From this directory:
 
 `/Users/ivanfrantar/Aerlytix/jsreportapp/data/investment-memo-jsreport-templates`
 
-You can pull and push to get the latest changes.
+You can pull and push to get the latest changes while on another tab on the terminal, run JSreport here:
+
+`/Users/ivanfrantar/Aerlytix/jsreportapp`
 
 
