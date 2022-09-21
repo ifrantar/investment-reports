@@ -14,7 +14,7 @@
     {{/if}}
 <main class="main">
     <header class="header">
-        <div class="header__lead">{{getHeaderText ../$pdf.pages @index}}</div>
+        <div class="header__lead">MSN 1719 - A330-900N - Trent 700-72 - Delivery Date: 2022-01-01  {{!--{{getHeaderText ../$pdf.pages @index}}--}}</div>
         {{#with (lookup ../$pdf.pages @index)}}
                 <h1>{{getTitle ../$pdf.pages @index}}</h1>
                 <p class="header__sub-head">{{getSubtitle ../$pdf.pages @index}}</p>
