@@ -9,7 +9,8 @@
 <body>
 <div class="content__main">
 <!-- Technical Snapshot -->
-{{{pdfCreatePagesGroup title="Technical Snapshot" subtitle="Technical Snapshot as of: " snapshotAsOf=technicalSnapshot.asOf msn=msn today=today}}} {{#each technicalSnapshot.engines}}
+{{{pdfCreatePagesGroup title="Technical Snapshot" subtitle="Technical Snapshot as of: " snapshotAsOf=technicalSnapshot.asOf msn=msn today=today logoImageData=logoImageData deliveryDate=aircraftDetails.deliveryDate airframeSubSeries=aircraftDetails.airframeSubSeries engineSubSeries=aircraftDetails.engineSubSeries}}} 
+{{#each technicalSnapshot.engines}}
 <section class="section pb-4">
     <h2 class="mb-1">{{this.engineName}}</h2>
     <div class="section grid grid__col-4">
@@ -59,9 +60,9 @@
                         <td>{{this.llpName}}</td>
                         <td class="text-right">{{this.cyclesRemaining}}</td>
                         <td class="text-right">{{this.limit}}</td>
-                        <td class="text-right" style="color: red">TO DO</td>
-                        <td class="text-right" style="color: red">TO DO</td>
-                        <td class="text-right" style="color: red">TO DO</td>
+                        <td class="text-right">{{this.fullLifePlanning}}</td>
+                        <td class="text-right">{{this.replacementCost}}</td>
+                        <td class="text-right">{{this.dollarPerCycle}}</td>
                     </tr>{{/each}}
                 </tbody>
             </table>

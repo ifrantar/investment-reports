@@ -1,8 +1,10 @@
 {
     "msn": "1285",
     "today": "July 15th, 2022",
+    "logoImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAABKBAMAAACP5v0AAAAAHlBMVEXMzMyWlpa3t7ecnJyqqqrFxcW+vr6jo6OxsbGysrKxAv35AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAvklEQVRYhe3QvQ6CMBSG4VPC33hIiLNGLwCiiCMkJjKWiGF18AJMjHvRwUvwdq2NcXGhsDh8z9Shb3p6iAAAAACA5rFkNidBxNa5s24KlsP74EiK2c1lvOmU7tv8cOnaXPbthb7JvPCLSW3er8LdtKvCondP776MzixMn3kp1ZmXWMyfMN9IfvulFBa9kzX6/yen+PRVuFUzi/npviKzPxaBoih66v2VFvv75dN+eKy56jGq99LrqB4AAOC/vACgYBpLZgTWQAAAAABJRU5ErkJggg==",
     "aircraftDetails": {
         "airframeSeries": "ATR72-200",
+        "airframeSubSeries": "ATR72-200",
         "engineSubSeries": "PW127M",
         "deliveryDate": "2015-12-01",
         "age": 6.6,
@@ -160,249 +162,387 @@
         }
     },
     "technicalSnapshot": {
-        "asOf": "2020-01-01",
-        "aircraftParts": [{
-            "partName": "Airframe",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "1C",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "2C",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "4C",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "2Y",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "4Y",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "8Y",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }, {
-                "checkName": "36000_FC",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Landing Gear - D22698500-8/C",
-            "totalHours": 1395.93,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1395.93",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Landing Gear - D23189000-24/D",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1395.93",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Landing Gear - D23190000-24/D",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1395.93",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Propeller Hub - FR20141117",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Propeller Blades - null",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Propeller Hub - FR20150110",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }, {
-            "partName": "Propeller Blades - null",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "checks": [{
-                "checkName": "OVERHAUL",
-                "lastCheckDate": "N/A",
-                "hoursAtLastShopVisit": "1384.85",
-                "cyclesAtLastShopVisit": "1355"
-            }]
-        }],
-        "engines": [{
-            "engineName": "Engine 1 - PCE-ED1125",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "modules": [{
-                "moduleName": "HSI",
-                "lastShopVisitDate": "2015-07-19",
-                "lastShopVisitCycles": "1355",
-                "lastShopVisitHours": "1384.85",
-                "llps": [{
-                    "llpName": "HPC_IMPELLER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_FRONT_COVER",
-                    "cyclesRemaining": 13457,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_REAR_COVER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_DISK",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "CSI",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "LPC_IMPELLER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "LPT_DISK",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "PT_BLADES",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "PT1_DISK",
-                    "cyclesRemaining": 28641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "PT2_DISK",
-                    "cyclesRemaining": 29977,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "RGB_OH",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "AIR_INLET_SEAL",
-                    "cyclesRemaining": 13324,
-                    "limit": "n/a"
-                }]
-            }]
-        }, {
-            "engineName": "Engine 2 - PCE-ED1124",
-            "totalHours": 1384.85,
-            "totalCycles": 1355,
-            "modules": [{
-                "moduleName": "HSI",
-                "lastShopVisitDate": "2015-07-19",
-                "lastShopVisitCycles": "1355",
-                "lastShopVisitHours": "1384.85",
-                "llps": [{
-                    "llpName": "HPC_IMPELLER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_FRONT_COVER",
-                    "cyclesRemaining": 13457,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_REAR_COVER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "HPT_DISK",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "CSI",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "LPC_IMPELLER",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "LPT_DISK",
-                    "cyclesRemaining": 13641,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "PT_BLADES",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "PT1_DISK",
-                    "cyclesRemaining": 28641,
-                    "limit": "n/a"
-                }, {
-                    "llpName": "PT2_DISK",
-                    "cyclesRemaining": 29977,
-                    "limit": "n/a"
-                }]
-            }, {
-                "moduleName": "RGB_OH",
-                "lastShopVisitDate": "",
-                "lastShopVisitCycles": "0",
-                "lastShopVisitHours": "0",
-                "llps": [{
-                    "llpName": "AIR_INLET_SEAL",
-                    "cyclesRemaining": 13324,
-                    "limit": "n/a"
-                }]
-            }]
-        }]
-    }
-
+    "asOf": "2019-12-03",
+    "aircraftParts": [
+      {
+        "partName": "Airframe",
+        "totalHours": "",
+        "totalCycles": "",
+        "checks": [
+          {
+            "checkName": "6_YEAR_CHECK",
+            "lastCheckDate": "2015-03-01",
+            "hoursAtLastShopVisit": "N/A",
+            "cyclesAtLastShopVisit": "N/A"
+          },
+          {
+            "checkName": "12_YEAR_CHECK",
+            "lastCheckDate": "2015-03-01",
+            "hoursAtLastShopVisit": "N/A",
+            "cyclesAtLastShopVisit": "N/A"
+          }
+        ]
+      },
+      {
+        "partName": "APU",
+        "totalHours": "11,001",
+        "totalCycles": "",
+        "checks": [
+          {
+            "checkName": "CHECK_1",
+            "lastCheckDate": "2015-03-01",
+            "hoursAtLastShopVisit": "1,000",
+            "cyclesAtLastShopVisit": "N/A"
+          }
+        ]
+      },
+      {
+        "partName": "Landing Gear - 1D688",
+        "totalHours": "",
+        "totalCycles": "2,601",
+        "checks": [
+          {
+            "checkName": "CHECK_1",
+            "lastCheckDate": "2015-03-01",
+            "hoursAtLastShopVisit": "N/A",
+            "cyclesAtLastShopVisit": "600"
+          }
+        ]
+      }
+    ],
+    "engines": [
+      {
+        "engineName": "Engine 1 - 42527",
+        "totalHours": "9,627",
+        "totalCycles": "1,700",
+        "modules": [
+          {
+            "moduleName": "FAN",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "BOOSTER_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "22,900",
+                "fullLifePlanning": "22,900",
+                "dollarPerCycle": "$18.47",
+                "replacementCost": "$422,900"
+              },
+              {
+                "llpName": "FAN_DISK",
+                "cyclesRemaining": "11,310",
+                "limit": "30,000",
+                "fullLifePlanning": "30,000",
+                "dollarPerCycle": "$9.67",
+                "replacementCost": "$290,100"
+              },
+              {
+                "llpName": "FAN_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "30,000",
+                "fullLifePlanning": "30,000",
+                "dollarPerCycle": "$7.01",
+                "replacementCost": "$210,200"
+              }
+            ]
+          },
+          {
+            "moduleName": "HOT_SECTION",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "CDP_SEAL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$4.63",
+                "replacementCost": "$92,693"
+              },
+              {
+                "llpName": "FRONT_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$7.67",
+                "replacementCost": "$153,402"
+              },
+              {
+                "llpName": "STAGE_1_2_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$10.94",
+                "replacementCost": "$218,824"
+              },
+              {
+                "llpName": "STAGE_4_9_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$24.16",
+                "replacementCost": "$483,188"
+              },
+              {
+                "llpName": "DISK",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$20.37",
+                "replacementCost": "$407,396"
+              },
+              {
+                "llpName": "FRONT_AIR_SEAL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$18.42",
+                "replacementCost": "$368,377"
+              },
+              {
+                "llpName": "REAR_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$6.22",
+                "replacementCost": "$124,325"
+              }
+            ]
+          },
+          {
+            "moduleName": "LPT",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "CONICAL_SUPPORT",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$7.98",
+                "replacementCost": "$199,500"
+              },
+              {
+                "llpName": "SHAFT",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$12.17",
+                "replacementCost": "$304,200"
+              },
+              {
+                "llpName": "STAGE_1_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$5.92",
+                "replacementCost": "$147,900"
+              },
+              {
+                "llpName": "STAGE_2_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$6.86",
+                "replacementCost": "$171,600"
+              },
+              {
+                "llpName": "STAGE_3_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$6.74",
+                "replacementCost": "$168,600"
+              },
+              {
+                "llpName": "STAGE_4_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$5.99",
+                "replacementCost": "$149,800"
+              }
+            ]
+          },
+          {
+            "moduleName": "GEARBOX",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": []
+          }
+        ]
+      },
+      {
+        "engineName": "Engine 2 - 42525",
+        "totalHours": "9,627",
+        "totalCycles": "1,700",
+        "modules": [
+          {
+            "moduleName": "FAN",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "BOOSTER_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "22,900",
+                "fullLifePlanning": "22,900",
+                "dollarPerCycle": "$18.47",
+                "replacementCost": "$422,900"
+              },
+              {
+                "llpName": "FAN_DISK",
+                "cyclesRemaining": "11,310",
+                "limit": "30,000",
+                "fullLifePlanning": "30,000",
+                "dollarPerCycle": "$9.67",
+                "replacementCost": "$290,100"
+              },
+              {
+                "llpName": "FAN_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "30,000",
+                "fullLifePlanning": "30,000",
+                "dollarPerCycle": "$7.01",
+                "replacementCost": "$210,200"
+              }
+            ]
+          },
+          {
+            "moduleName": "HOT_SECTION",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "CDP_SEAL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$4.63",
+                "replacementCost": "$92,693"
+              },
+              {
+                "llpName": "FRONT_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$7.67",
+                "replacementCost": "$153,402"
+              },
+              {
+                "llpName": "STAGE_1_2_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$10.94",
+                "replacementCost": "$218,824"
+              },
+              {
+                "llpName": "STAGE_4_9_SPOOL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$24.16",
+                "replacementCost": "$483,188"
+              },
+              {
+                "llpName": "DISK",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$20.37",
+                "replacementCost": "$407,396"
+              },
+              {
+                "llpName": "FRONT_AIR_SEAL",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$18.42",
+                "replacementCost": "$368,377"
+              },
+              {
+                "llpName": "REAR_SHAFT",
+                "cyclesRemaining": "11,310",
+                "limit": "20,000",
+                "fullLifePlanning": "20,000",
+                "dollarPerCycle": "$6.22",
+                "replacementCost": "$124,325"
+              }
+            ]
+          },
+          {
+            "moduleName": "LPT",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": [
+              {
+                "llpName": "CONICAL_SUPPORT",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$7.98",
+                "replacementCost": "$199,500"
+              },
+              {
+                "llpName": "SHAFT",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$12.17",
+                "replacementCost": "$304,200"
+              },
+              {
+                "llpName": "STAGE_1_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$5.92",
+                "replacementCost": "$147,900"
+              },
+              {
+                "llpName": "STAGE_2_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$6.86",
+                "replacementCost": "$171,600"
+              },
+              {
+                "llpName": "STAGE_3_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$6.74",
+                "replacementCost": "$168,600"
+              },
+              {
+                "llpName": "STAGE_4_DISK",
+                "cyclesRemaining": "4,300",
+                "limit": "25,000",
+                "fullLifePlanning": "25,000",
+                "dollarPerCycle": "$5.99",
+                "replacementCost": "$149,800"
+              }
+            ]
+          },
+          {
+            "moduleName": "GEARBOX",
+            "lastShopVisitDate": "2015-02-03",
+            "lastShopVisitCycles": "0",
+            "lastShopVisitHours": "0",
+            "llps": []
+          }
+        ]
+      }
+    ]
+  }
 }

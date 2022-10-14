@@ -6,7 +6,6 @@
 const jsreport = require('jsreport-proxy')
 
 function inspector (pdfObject) {
-    console.log(pdfObject);
 
     return "ABC"
 }
@@ -28,10 +27,8 @@ function getPageInfo (pages, index) {
 }
 
 async function afterRender(req, res) {
-    console.log(req)
     // get number of pages
     // delete the last one
     const document = await jsreport.pdfUtils.parse(res.content)
-    console.log(document.pages.length)
     res.content = await jsreport.pdfUtils.removePages(res.content, document.pages.length)
 }

@@ -2,6 +2,20 @@ function getPageInfo (pages, index) {
     return (index + 1) + ' of ' + (pages.length - 1)
 }
 
+function getLogoImageData(pdfPages, index) {
+    if (pdfPages[index].group && pdfPages[index].group.logoImageData) {
+        return pdfPages[index].group.logoImageData
+    }
+}
+
+function getCoverImageData(pdfPages) {
+    if (pdfPages[pdfPages.length-1] && pdfPages[pdfPages.length-1].group && pdfPages[pdfPages.length-1].group.logoImageData) {
+        return pdfPages[pdfPages.length-1].group.logoImageData
+    } else {
+        return ""
+    }
+}
+
 function replaceLabel(label){
    return label.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join(' ');
 }
@@ -24,8 +38,16 @@ function getSubtitle (pdfPages, index) {
 }
 
 function getHeaderText (pdfPages, index) {
-    if (pdfPages[index].group && pdfPages[index].group.msn && pdfPages[index].group.today) {
-        return "MSN - " + pdfPages[index].group.msn + " - Investment Memo - " + pdfPages[index].group.today
+    console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&")
+    console.log(pdfPages[index].group)
+    if (
+        pdfPages[index].group && 
+        pdfPages[index].group.msn && 
+        pdfPages[index].group.airframeSubSeries &&
+        pdfPages[index].group.engineSubSeries &&
+        pdfPages[index].group.deliveryDate 
+    ) {
+        return "MSN - " + pdfPages[index].group.msn + " - " + pdfPages[index].group.airframeSubSeries + " - " + pdfPages[index].group.engineSubSeries + " - Delivery Date: " + pdfPages[index].group.deliveryDate
     } else {
         return ""
     }
