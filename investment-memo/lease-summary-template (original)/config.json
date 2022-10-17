@@ -9,13 +9,14 @@
     "chrome": {
         "printBackground": true,
         "marginTop": "4cm",
-        "marginBottom": "1.9cm"
+        "marginBottom": "1.9cm",
+        "format": "a4"
     },
     "creationDate": {
         "$$date": 1662999255574
     },
     "modificationDate": {
-        "$$date": 1666002113311
+        "$$date": 1666020079714
     },
     "_id": "b1UYHHC8YJKdfwJJ",
     "$entitySet": "templates"

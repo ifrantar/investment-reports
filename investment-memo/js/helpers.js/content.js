@@ -38,8 +38,6 @@ function getSubtitle (pdfPages, index) {
 }
 
 function getHeaderText (pdfPages, index) {
-    console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&")
-    console.log(pdfPages[index].group)
     if (
         pdfPages[index].group && 
         pdfPages[index].group.msn && 
@@ -79,7 +77,6 @@ function tableOfContents (pdfPages) {
             firstPageOfSection: firstPageOfSection
         })
     }
-    console.log(contents);
     return contents;
 }
 

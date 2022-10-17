@@ -6,13 +6,14 @@
         "shortid": "Zwo8D0mSm"
     },
     "chrome": {
-        "printBackground": true
+        "printBackground": true,
+        "format": "a4"
     },
     "creationDate": {
         "$$date": 1662999255573
     },
     "modificationDate": {
-        "$$date": 1666005811595
+        "$$date": 1666020066556
     },
     "pdfOperations": [],
     "shortid": "lQGhiSc",

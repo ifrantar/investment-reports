@@ -555,3 +555,7 @@ body {
     -webkit-print-color-adjust: exact;
     display: block;
 }
+
+.force_page_break {
+    page-break-before: always;
+}

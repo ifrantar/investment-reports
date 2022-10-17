@@ -5,13 +5,14 @@
     "data": null,
     "shortid": "YC6hDnSZb",
     "chrome": {
-        "printBackground": true
+        "printBackground": true,
+        "format": "a4"
     },
     "creationDate": {
         "$$date": 1662999255577
     },
     "modificationDate": {
-        "$$date": 1662999255577
+        "$$date": 1666020087265
     },
     "_id": "v6yTmFQkYRLEZrdd",
     "$entitySet": "templates"

@@ -7,25 +7,32 @@
     </style>
 </head>
 <body>
+
 <div class="content__main">
 <!-- Technical Snapshot -->
 {{{pdfCreatePagesGroup title="Technical Snapshot" subtitle="Technical Snapshot as of: " snapshotAsOf=technicalSnapshot.asOf msn=msn today=today logoImageData=logoImageData deliveryDate=aircraftDetails.deliveryDate airframeSubSeries=aircraftDetails.airframeSubSeries engineSubSeries=aircraftDetails.engineSubSeries}}} 
 {{#each technicalSnapshot.engines}}
-<section class="section pb-4">
-    <h2 class="mb-1">{{this.engineName}}</h2>
-    <div class="section grid grid__col-4">
-        <div class="nugget">
-            <h4>Total Hours</h4>
-            <p class="h2 fw-normal">{{this.totalHours}}</p>
-        </div>
-        <div class="nugget">
-            <h4>Total Cycles</h4>
-            <p class="h2 fw-normal">{{this.totalHours}}</p>
+{{#if @index}}
+    <div style="page-break-before: always;"></div>
+{{/if}}
+<section class="section pb-4 tech-spec-engine-section">
+    <div>
+        <h2 class="mb-1">{{this.engineName}}</h2>
+        <div class="section grid grid__col-4">
+            <div class="nugget">
+                <h4>Total Hours</h4>
+                <p class="h2 fw-normal">{{this.totalHours}}</p>
+            </div>
+            <div class="nugget">
+                <h4>Total Cycles</h4>
+                <p class="h2 fw-normal">{{this.totalHours}}</p>
+            </div>
         </div>
     </div>
-    <div class="section">
-        {{#each this.modules}}
-        <div class="mb-6">
+    
+    {{#each this.modules}}
+
+        <div class="mb-6 engine-module-section-div">
             <h3 class="mb-0">{{this.moduleName}}</h3>
             <table class="table mb-3">
                 {{#if this.lastShopVisitDate}}
@@ -43,6 +50,7 @@
                     <td class="text-right">{{this.lastShopVisitCycles}}</td>
                 </tr>
             </table>
+            {{#if this.llps.length}}
             <table class="table">
                 <thead>
                     <tr>
@@ -66,8 +74,11 @@
                     </tr>{{/each}}
                 </tbody>
             </table>
+            
+            {{/if}}
+            
         </div>
-        {{/each}}
+    {{/each}}
 </section>
 {{/each}}
 
@@ -76,18 +87,21 @@
 <div style="page-break-before: always;"></div>
 
 {{#each technicalSnapshot.aircraftParts}}
-<section class="section pb-4">
-    <h2 class="mb-1">{{this.partName}}</h2>
-    <div class="section grid grid__col-4">
-        <div class="nugget">
-            <h4 class="mb-1">Total Hours</h4>
-            <p class="h2 fw-normal">{{this.totalHours}}</p>
-        </div>
-        <div class="nugget">
-            <h4 class="mb-1">Total Cycles</h4>
-            <p class="h2 fw-normal">{{this.totalCycles}}</p>
+<section class="section mb-4 tech-spec-parts-section">
+    <div>
+        <h2 class="mb-1">{{this.partName}}</h2>
+        <div class="section grid grid__col-4">
+            <div class="nugget">
+                <h4 class="mb-1">Total Hours</h4>
+                <p class="h2 fw-normal">{{this.totalHours}}</p>
+            </div>
+            <div class="nugget">
+                <h4 class="mb-1">Total Cycles</h4>
+                <p class="h2 fw-normal">{{this.totalCycles}}</p>
+            </div>
         </div>
     </div>
+    
     <div class="section">
         {{#each this.checks}}
         <div class="mb-6">
@@ -114,7 +128,36 @@
 
 
 <!-- end of technical snapshot -->
+<script> 
+    const MAX_PAGE_SIZE = 900 
+    const engines = document.getElementsByClassName("tech-spec-engine-section");
+    for (const engine of engines) {
 
+        let runningTotal = 0;
+        for (const child of engine.children) {
+            const currentElementHeight = child.offsetHeight;
+            if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
+                child.style["page-break-before"] = "always";
+                runningTotal = 0;
+            }
+            runningTotal += currentElementHeight; 
+        }
+    }
+
+    const parts = document.getElementsByClassName("tech-spec-parts-section");
+    let runningTotal = 0;
+    for (const part of parts) {
+            const currentElementHeight = part.offsetHeight;
+            if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
+                part.style["page-break-before"] = "always";
+                runningTotal = 0;
+            }
+            runningTotal += currentElementHeight; 
+    }  
+</script>
 </div>
+
+
+
 </body>
 </html>

@@ -4,13 +4,14 @@
     "recipe": "chrome-pdf",
     "data": null,
     "chrome": {
-        "printBackground": true
+        "printBackground": true,
+        "format": "a4"
     },
     "creationDate": {
         "$$date": 1662999255569
     },
     "modificationDate": {
-        "$$date": 1666006810534
+        "$$date": 1666020104986
     },
     "shortid": "3t7WGnV",
     "_id": "QTcm7OGBFq4hA3AT",
