@@ -16,6 +16,7 @@
     --h1: 26px;
     --h2: 20px;
     --h3: 16px;
+    --h4: 12px;
     --p-standard: 14px;
     --small: 12px;
     --smaller: 10px;
@@ -412,7 +413,7 @@ h3, .h3 {
         text-transform: uppercase;
         color:var(--grey-80);
         margin-bottom:var(--smaller);
-        font-size: var(--h3) ;
+        font-size: var(--h4) ;
     }
 
     .cover__aircraft-details__bold {
@@ -441,6 +442,16 @@ h3, .h3 {
     top:580px;
     left:100px;
     font-size: var(--h1);
+}
+
+.cover__generated-by-aerlytix-text {
+    margin-bottom:var(--spc-4);
+}
+
+.cover__generated-by-aerlytix {
+    position: absolute;
+    top:900px;
+    left:100px;
 }
 
 /************ MAIN *************/
