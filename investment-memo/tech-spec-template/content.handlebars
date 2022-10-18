@@ -129,13 +129,14 @@
 
 <!-- end of technical snapshot -->
 <script> 
-    const MAX_PAGE_SIZE = 900 
+    const MAX_PAGE_SIZE = 800 
     const engines = document.getElementsByClassName("tech-spec-engine-section");
     for (const engine of engines) {
 
         let runningTotal = 0;
         for (const child of engine.children) {
             const currentElementHeight = child.offsetHeight;
+            console.log(`Running Total: ${runningTotal}`)
             if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
                 child.style["page-break-before"] = "always";
                 runningTotal = 0;
