@@ -11,6 +11,7 @@
 <div class="content__main">
 <!-- Technical Snapshot -->
 {{{pdfCreatePagesGroup title="Technical Snapshot" subtitle="Technical Snapshot as of: " snapshotAsOf=technicalSnapshot.asOf msn=msn today=today logoImageData=logoImageData deliveryDate=aircraftDetails.deliveryDate airframeSubSeries=aircraftDetails.airframeSubSeries engineSubSeries=aircraftDetails.engineSubSeries}}} 
+
 {{#each technicalSnapshot.engines}}
 {{#if @index}}
     <div style="page-break-before: always;"></div>
@@ -35,12 +36,15 @@
         <div class="mb-6 engine-module-section-div">
             <h3 class="mb-0">{{this.moduleName}}</h3>
             <table class="table mb-3">
-                {{#if this.lastShopVisitDate}}
+                
                 <tr>
                     <th class="text-left">Last shop visit date</th>
+                    {{#if this.lastShopVisitDate}}
                     <td class="text-right">{{this.lastShopVisitDate}}</td>
+                    {{else}}
+                    <td class="text-right">N/A</td>
+                    {{/if}}
                 </tr>
-                {{else}} {{/if}}
                 <tr>
                     <th class="text-left">Hours at last shop visit</th>
                     <td class="text-right">{{this.lastShopVisitHours}}</td>
