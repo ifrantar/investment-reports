@@ -161,10 +161,31 @@
                 {{#each leaseSnapshot.lessorContribution.engines}}
                 <div class="section__sub-1">
                 
-                    <h3 class="h3__no-border mb-2">ESN892983</h3>
+                    <h3 class="h3__no-border mb-2">{{this.esn}}</h3>
                     <h4 class="mb-2">Module PR</h4>
-                    {{#each this.modulesPr}}
-                    <h5 class="mb-2">Fan</h5>                    
+                    {{#each this.modulesPR}}
+                    
+                    <h5 class="mb-2">{{this.moduleName}}</h5>                    
+                    <table class="table mb-2">
+                        <tr>
+                            <th class="text-left">Payables</th>
+                            <th class="text-right">On</th>
+                            <th class="text-right">At EOL</th>
+                        </tr>
+                        {{#each this.payables}}
+                        <tr>
+                            <td class="text-left">{{this.value}}</td>
+                            <td class="text-right">{{this.date}}</td>
+                            <td class="text-right">{{#if this.atEOL}} YES {{else}} NO {{/if}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    {{/each}}
+                    
+                    <h4 class="mb-2">LLPs</h4>
+                    {{#each this.llps}}
+                    <h5 class="mb-2">{{this.llpName}}</h5>
+                    <p class="mb-2">Claimed: {{#if this.claimed}}YES{{else}}NO{{/if}}</p>
                     <table class="table">
                         <tr>
                             <th class="text-left">Payables</th>
@@ -175,52 +196,22 @@
                         <tr>
                             <td class="text-left">{{this.value}}</td>
                             <td class="text-right">{{this.date}}</td>
-                            <td class="text-right">{{#if this.atEol}} YES {{else}} NO {{/if}}</td>
+                            <td class="text-right">{{#if this.atEOL}}YES{{else}}NO{{/if}}</td>
                         </tr>
-                        {{/each}}
-                    </table>
-                    {{/each}}
-                    
-                    <h4 class="mb-2">LLPs</h4>
-                    {{#each this.llps}}
-                    <h5 class="mb-2">{{this.llpName}}</h5>
-                    <p class="mb-2">Claimed: YES</p>
-                    <table class="table">
-                        <tr>
-                            <th class="text-left">Payables</th>
-                            <th class="text-right">On</th>
-                            <th class="text-right">At EOL</th>
-                        </tr>
-                        <tr>
-                            <td class="text-left">$100,000</td>
-                            <td class="text-right">2022-10-01</td>
-                            <td class="text-right">YES</td>
-                        </tr>               
+                        {{/each}}             
                     </table>
                     {{/each}}
                 
                 </div>
                 {{/each}}
-                
 
+                {{#each leaseSnapshot.lessorContribution.aircraftParts}}
                 <div class="section__sub-1">
                     
-                    <h3 class="h3__no-border mb-2">ESN892983</h3>
-
-                    <p style="color: red">Same as Engine 1</p>
-
-                </div>
-
-
-                <div class="section__sub-1">
-                    
-                    <h3 class="h3__no-border mb-2">Airframe</h3>
-                    
-                    <table class="table__container mb-6">
-                        <tr>
-                            <td>
-                                <h4 class="mb-2">6 Year Check</h4>
-                                <table class="table">
+                    <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
+                    {{#each this.checks}}
+                    <h4 class="mb-2">{{this.checkName}}</h4>
+                    <table class="table mb-6">
                                     <tr>
                                         <th class="text-left">Payables</th>
                                         <th class="text-right">On</th>
@@ -231,82 +222,11 @@
                                         <td class="text-right">2022-10-01</td>
                                         <td class="text-right">YES</td>
                                     </tr>
-                                </table>
-                            </td>
-                            <td width="10">&nbsp;</td>
-                            <td>
-                                <h4 class="mb-2">12 Year Check</h4>
-                                <table class="table">
-                                    <tr>
-                                        <th class="text-left">Payables</th>
-                                        <th class="text-right">On</th>
-                                        <th class="text-right">At EOL</th>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-left">$100,000</td>
-                                        <td class="text-right">2022-10-01</td>
-                                        <td class="text-right">YES</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                            </td>     
                     </table>
-
+                    {{/each}}
                 </div>
-
-
-                <div class="section__sub-1">
-                    
-                    <h3 class="h3__no-border mb-2">APU</h3>
-                    
-                    <table class="table__container mb-6">
-                        <tr>
-                            <td>
-                                <h4 class="mb-2">Check</h4>
-                                <table class="table">
-                                    <tr>
-                                        <th class="text-left">Payables</th>
-                                        <th class="text-right">On</th>
-                                        <th class="text-right">At EOL</th>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-left">$100,000</td>
-                                        <td class="text-right">2022-10-01</td>
-                                        <td class="text-right">YES</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-                </div>
-
-                <div class="section__sub-1">
-                    
-                    <h3 class="h3__no-border mb-2">Landing Gear</h3>
-                    
-                    <table class="table__container mb-6">
-                        <tr>
-                            <td>
-                                <h4 class="mb-2">Check</h4>
-                                <table class="table">
-                                    <tr>
-                                        <th class="text-left">Payables</th>
-                                        <th class="text-right">On</th>
-                                        <th class="text-right">At EOL</th>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-left">$100,000</td>
-                                        <td class="text-right">2022-10-01</td>
-                                        <td class="text-right">YES</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-                </div>
-                
+                {{/each}}
             </div>
         </section>
     

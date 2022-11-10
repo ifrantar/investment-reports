@@ -214,7 +214,7 @@
               "llps": [
                 {
                   "llpName": "Booster Spool",
-                  "claimed": true,
+                  "claimed": false,
                   "payables": [
                     {
                       "value": "Payables 1 Value",
