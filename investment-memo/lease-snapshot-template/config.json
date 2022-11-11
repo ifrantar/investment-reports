@@ -1,0 +1,26 @@
+{
+    "name": "lease-snapshot-template",
+    "recipe": "chrome-pdf",
+    "shortid": "veNUL41QO",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "Zwo8D0mSm"
+    },
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "4cm",
+        "marginBottom": "1.9cm",
+        "viewportHeight": null,
+        "format": "a4"
+    },
+    "creationDate": {
+        "$$date": 1667924408400
+    },
+    "modificationDate": {
+        "$$date": 1668082492061
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "YnpPS1e5nKENI78r",
+    "$entitySet": "templates"
+}

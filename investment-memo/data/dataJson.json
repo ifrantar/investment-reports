@@ -161,388 +161,457 @@
             }
         }
     },
+    "leaseSnapshot": {
+        "cashSecurityDeposit": "Security Deposit Value",
+        "mr": {
+            "engines": [{
+                "esn": "ESN 1",
+                "pr": {
+                    "cashBalance": "Cash Balance",
+                    "letterOfCreditBalance": "Letter Of Credit Balance",
+                    "payables": [{
+                        "value": "Payables 1 Value",
+                        "date": "Payables 1 Value"
+                    }]
+                },
+                "llps": {
+                    "cashBalance": "Cash Balance",
+                    "letterOfCreditBalance": "Letter Of Credit Balance",
+                    "payables": [{
+                        "value": "Payables 1 Value",
+                        "date": "Payables 1 Value"
+                    }]
+                }
+            }],
+            "aircraftParts": [{
+                "partName": "Airframe",
+                "checks": [{
+                    "checkName": "12_YEAR_CHECK",
+                    "cashBalance": "Cash Balance",
+                    "letterOfCreditBalance": "letterOfCreditBalance",
+                    "payables": [{
+                        "value": "Payables 1 Value",
+                        "date": "Payables 1 Date"
+                    }]
+                }]
+            }]
+        },
+        "lessorContribution": {
+          "engines": [
+            {
+              "esn": "ESN 1",
+              "modulesPR": [
+                {
+                  "moduleName": "Fan",
+                  "payables": [{
+                    "value": "Payables 1 Value",
+                    "date":"Payables 1 Date",
+                    "atEOL": true
+
+                  }]
+                }
+              ],
+              "llps": [
+                {
+                  "llpName": "Booster Spool",
+                  "claimed": false,
+                  "payables": [
+                    {
+                      "value": "Payables 1 Value",
+                      "date": "Payables 1 Date",
+                      "atEol": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "aircraftParts":[
+            {
+              "partName": "Airframe",
+              "checks": [
+                {
+                  "checkName": "12_YEAR_CHECK",
+                  "payables": [
+                    {
+                      "value":"Payables 1 Value",
+                      "date": "Payables 1 Date",
+                      "atEol": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+    },
     "technicalSnapshot": {
-    "asOf": "2019-12-03",
-    "aircraftParts": [
-      {
-        "partName": "Airframe",
-        "totalHours": "",
-        "totalCycles": "",
-        "checks": [
-          {
-            "checkName": "6_YEAR_CHECK",
-            "lastCheckDate": "2015-03-01",
-            "hoursAtLastShopVisit": "N/A",
-            "cyclesAtLastShopVisit": "N/A"
-          },
-          {
-            "checkName": "12_YEAR_CHECK",
-            "lastCheckDate": "2015-03-01",
-            "hoursAtLastShopVisit": "N/A",
-            "cyclesAtLastShopVisit": "N/A"
-          }
+        "asOf": "2019-12-03",
+        "aircraftParts": [{
+                "partName": "Airframe",
+                "totalHours": "",
+                "totalCycles": "",
+                "checks": [{
+                        "checkName": "6_YEAR_CHECK",
+                        "lastCheckDate": "2015-03-01",
+                        "hoursAtLastShopVisit": "N/A",
+                        "cyclesAtLastShopVisit": "N/A"
+                    },
+                    {
+                        "checkName": "12_YEAR_CHECK",
+                        "lastCheckDate": "2015-03-01",
+                        "hoursAtLastShopVisit": "N/A",
+                        "cyclesAtLastShopVisit": "N/A"
+                    }
+                ]
+            },
+            {
+                "partName": "APU",
+                "totalHours": "11,001",
+                "totalCycles": "",
+                "checks": [{
+                    "checkName": "CHECK_1",
+                    "lastCheckDate": "2015-03-01",
+                    "hoursAtLastShopVisit": "1,000",
+                    "cyclesAtLastShopVisit": "N/A"
+                }]
+            },
+            {
+                "partName": "Landing Gear - 1D688",
+                "totalHours": "",
+                "totalCycles": "2,601",
+                "checks": [{
+                    "checkName": "CHECK_1",
+                    "lastCheckDate": "2015-03-01",
+                    "hoursAtLastShopVisit": "N/A",
+                    "cyclesAtLastShopVisit": "600"
+                }]
+            }
+        ],
+        "engines": [{
+                "engineName": "Engine 1 - 42527",
+                "totalHours": "9,627",
+                "totalCycles": "1,700",
+                "modules": [{
+                        "moduleName": "FAN",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "BOOSTER_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "22,900",
+                                "fullLifePlanning": "22,900",
+                                "dollarPerCycle": "$18.47",
+                                "replacementCost": "$422,900"
+                            },
+                            {
+                                "llpName": "FAN_DISK",
+                                "cyclesRemaining": "11,310",
+                                "limit": "30,000",
+                                "fullLifePlanning": "30,000",
+                                "dollarPerCycle": "$9.67",
+                                "replacementCost": "$290,100"
+                            },
+                            {
+                                "llpName": "FAN_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "30,000",
+                                "fullLifePlanning": "30,000",
+                                "dollarPerCycle": "$7.01",
+                                "replacementCost": "$210,200"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "HOT_SECTION",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "CDP_SEAL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$4.63",
+                                "replacementCost": "$92,693"
+                            },
+                            {
+                                "llpName": "FRONT_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$7.67",
+                                "replacementCost": "$153,402"
+                            },
+                            {
+                                "llpName": "STAGE_1_2_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$10.94",
+                                "replacementCost": "$218,824"
+                            },
+                            {
+                                "llpName": "STAGE_4_9_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$24.16",
+                                "replacementCost": "$483,188"
+                            },
+                            {
+                                "llpName": "DISK",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$20.37",
+                                "replacementCost": "$407,396"
+                            },
+                            {
+                                "llpName": "FRONT_AIR_SEAL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$18.42",
+                                "replacementCost": "$368,377"
+                            },
+                            {
+                                "llpName": "REAR_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$6.22",
+                                "replacementCost": "$124,325"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "LPT",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "CONICAL_SUPPORT",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$7.98",
+                                "replacementCost": "$199,500"
+                            },
+                            {
+                                "llpName": "SHAFT",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$12.17",
+                                "replacementCost": "$304,200"
+                            },
+                            {
+                                "llpName": "STAGE_1_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$5.92",
+                                "replacementCost": "$147,900"
+                            },
+                            {
+                                "llpName": "STAGE_2_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$6.86",
+                                "replacementCost": "$171,600"
+                            },
+                            {
+                                "llpName": "STAGE_3_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$6.74",
+                                "replacementCost": "$168,600"
+                            },
+                            {
+                                "llpName": "STAGE_4_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$5.99",
+                                "replacementCost": "$149,800"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "GEARBOX",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": []
+                    }
+                ]
+            },
+            {
+                "engineName": "Engine 2 - 42525",
+                "totalHours": "9,627",
+                "totalCycles": "1,700",
+                "modules": [{
+                        "moduleName": "FAN",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "BOOSTER_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "22,900",
+                                "fullLifePlanning": "22,900",
+                                "dollarPerCycle": "$18.47",
+                                "replacementCost": "$422,900"
+                            },
+                            {
+                                "llpName": "FAN_DISK",
+                                "cyclesRemaining": "11,310",
+                                "limit": "30,000",
+                                "fullLifePlanning": "30,000",
+                                "dollarPerCycle": "$9.67",
+                                "replacementCost": "$290,100"
+                            },
+                            {
+                                "llpName": "FAN_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "30,000",
+                                "fullLifePlanning": "30,000",
+                                "dollarPerCycle": "$7.01",
+                                "replacementCost": "$210,200"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "HOT_SECTION",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "CDP_SEAL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$4.63",
+                                "replacementCost": "$92,693"
+                            },
+                            {
+                                "llpName": "FRONT_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$7.67",
+                                "replacementCost": "$153,402"
+                            },
+                            {
+                                "llpName": "STAGE_1_2_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$10.94",
+                                "replacementCost": "$218,824"
+                            },
+                            {
+                                "llpName": "STAGE_4_9_SPOOL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$24.16",
+                                "replacementCost": "$483,188"
+                            },
+                            {
+                                "llpName": "DISK",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$20.37",
+                                "replacementCost": "$407,396"
+                            },
+                            {
+                                "llpName": "FRONT_AIR_SEAL",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$18.42",
+                                "replacementCost": "$368,377"
+                            },
+                            {
+                                "llpName": "REAR_SHAFT",
+                                "cyclesRemaining": "11,310",
+                                "limit": "20,000",
+                                "fullLifePlanning": "20,000",
+                                "dollarPerCycle": "$6.22",
+                                "replacementCost": "$124,325"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "LPT",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": [{
+                                "llpName": "CONICAL_SUPPORT",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$7.98",
+                                "replacementCost": "$199,500"
+                            },
+                            {
+                                "llpName": "SHAFT",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$12.17",
+                                "replacementCost": "$304,200"
+                            },
+                            {
+                                "llpName": "STAGE_1_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$5.92",
+                                "replacementCost": "$147,900"
+                            },
+                            {
+                                "llpName": "STAGE_2_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$6.86",
+                                "replacementCost": "$171,600"
+                            },
+                            {
+                                "llpName": "STAGE_3_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$6.74",
+                                "replacementCost": "$168,600"
+                            },
+                            {
+                                "llpName": "STAGE_4_DISK",
+                                "cyclesRemaining": "4,300",
+                                "limit": "25,000",
+                                "fullLifePlanning": "25,000",
+                                "dollarPerCycle": "$5.99",
+                                "replacementCost": "$149,800"
+                            }
+                        ]
+                    },
+                    {
+                        "moduleName": "GEARBOX",
+                        "lastShopVisitDate": "2015-02-03",
+                        "lastShopVisitCycles": "0",
+                        "lastShopVisitHours": "0",
+                        "llps": []
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "partName": "APU",
-        "totalHours": "11,001",
-        "totalCycles": "",
-        "checks": [
-          {
-            "checkName": "CHECK_1",
-            "lastCheckDate": "2015-03-01",
-            "hoursAtLastShopVisit": "1,000",
-            "cyclesAtLastShopVisit": "N/A"
-          }
-        ]
-      },
-      {
-        "partName": "Landing Gear - 1D688",
-        "totalHours": "",
-        "totalCycles": "2,601",
-        "checks": [
-          {
-            "checkName": "CHECK_1",
-            "lastCheckDate": "2015-03-01",
-            "hoursAtLastShopVisit": "N/A",
-            "cyclesAtLastShopVisit": "600"
-          }
-        ]
-      }
-    ],
-    "engines": [
-      {
-        "engineName": "Engine 1 - 42527",
-        "totalHours": "9,627",
-        "totalCycles": "1,700",
-        "modules": [
-          {
-            "moduleName": "FAN",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "BOOSTER_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "22,900",
-                "fullLifePlanning": "22,900",
-                "dollarPerCycle": "$18.47",
-                "replacementCost": "$422,900"
-              },
-              {
-                "llpName": "FAN_DISK",
-                "cyclesRemaining": "11,310",
-                "limit": "30,000",
-                "fullLifePlanning": "30,000",
-                "dollarPerCycle": "$9.67",
-                "replacementCost": "$290,100"
-              },
-              {
-                "llpName": "FAN_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "30,000",
-                "fullLifePlanning": "30,000",
-                "dollarPerCycle": "$7.01",
-                "replacementCost": "$210,200"
-              }
-            ]
-          },
-          {
-            "moduleName": "HOT_SECTION",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "CDP_SEAL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$4.63",
-                "replacementCost": "$92,693"
-              },
-              {
-                "llpName": "FRONT_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$7.67",
-                "replacementCost": "$153,402"
-              },
-              {
-                "llpName": "STAGE_1_2_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$10.94",
-                "replacementCost": "$218,824"
-              },
-              {
-                "llpName": "STAGE_4_9_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$24.16",
-                "replacementCost": "$483,188"
-              },
-              {
-                "llpName": "DISK",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$20.37",
-                "replacementCost": "$407,396"
-              },
-              {
-                "llpName": "FRONT_AIR_SEAL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$18.42",
-                "replacementCost": "$368,377"
-              },
-              {
-                "llpName": "REAR_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$6.22",
-                "replacementCost": "$124,325"
-              }
-            ]
-          },
-          {
-            "moduleName": "LPT",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "CONICAL_SUPPORT",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$7.98",
-                "replacementCost": "$199,500"
-              },
-              {
-                "llpName": "SHAFT",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$12.17",
-                "replacementCost": "$304,200"
-              },
-              {
-                "llpName": "STAGE_1_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$5.92",
-                "replacementCost": "$147,900"
-              },
-              {
-                "llpName": "STAGE_2_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$6.86",
-                "replacementCost": "$171,600"
-              },
-              {
-                "llpName": "STAGE_3_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$6.74",
-                "replacementCost": "$168,600"
-              },
-              {
-                "llpName": "STAGE_4_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$5.99",
-                "replacementCost": "$149,800"
-              }
-            ]
-          },
-          {
-            "moduleName": "GEARBOX",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": []
-          }
-        ]
-      },
-      {
-        "engineName": "Engine 2 - 42525",
-        "totalHours": "9,627",
-        "totalCycles": "1,700",
-        "modules": [
-          {
-            "moduleName": "FAN",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "BOOSTER_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "22,900",
-                "fullLifePlanning": "22,900",
-                "dollarPerCycle": "$18.47",
-                "replacementCost": "$422,900"
-              },
-              {
-                "llpName": "FAN_DISK",
-                "cyclesRemaining": "11,310",
-                "limit": "30,000",
-                "fullLifePlanning": "30,000",
-                "dollarPerCycle": "$9.67",
-                "replacementCost": "$290,100"
-              },
-              {
-                "llpName": "FAN_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "30,000",
-                "fullLifePlanning": "30,000",
-                "dollarPerCycle": "$7.01",
-                "replacementCost": "$210,200"
-              }
-            ]
-          },
-          {
-            "moduleName": "HOT_SECTION",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "CDP_SEAL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$4.63",
-                "replacementCost": "$92,693"
-              },
-              {
-                "llpName": "FRONT_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$7.67",
-                "replacementCost": "$153,402"
-              },
-              {
-                "llpName": "STAGE_1_2_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$10.94",
-                "replacementCost": "$218,824"
-              },
-              {
-                "llpName": "STAGE_4_9_SPOOL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$24.16",
-                "replacementCost": "$483,188"
-              },
-              {
-                "llpName": "DISK",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$20.37",
-                "replacementCost": "$407,396"
-              },
-              {
-                "llpName": "FRONT_AIR_SEAL",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$18.42",
-                "replacementCost": "$368,377"
-              },
-              {
-                "llpName": "REAR_SHAFT",
-                "cyclesRemaining": "11,310",
-                "limit": "20,000",
-                "fullLifePlanning": "20,000",
-                "dollarPerCycle": "$6.22",
-                "replacementCost": "$124,325"
-              }
-            ]
-          },
-          {
-            "moduleName": "LPT",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": [
-              {
-                "llpName": "CONICAL_SUPPORT",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$7.98",
-                "replacementCost": "$199,500"
-              },
-              {
-                "llpName": "SHAFT",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$12.17",
-                "replacementCost": "$304,200"
-              },
-              {
-                "llpName": "STAGE_1_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$5.92",
-                "replacementCost": "$147,900"
-              },
-              {
-                "llpName": "STAGE_2_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$6.86",
-                "replacementCost": "$171,600"
-              },
-              {
-                "llpName": "STAGE_3_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$6.74",
-                "replacementCost": "$168,600"
-              },
-              {
-                "llpName": "STAGE_4_DISK",
-                "cyclesRemaining": "4,300",
-                "limit": "25,000",
-                "fullLifePlanning": "25,000",
-                "dollarPerCycle": "$5.99",
-                "replacementCost": "$149,800"
-              }
-            ]
-          },
-          {
-            "moduleName": "GEARBOX",
-            "lastShopVisitDate": "2015-02-03",
-            "lastShopVisitCycles": "0",
-            "lastShopVisitHours": "0",
-            "llps": []
-          }
-        ]
-      }
-    ]
-  }
+    }
 }

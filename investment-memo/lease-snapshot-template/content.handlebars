@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lease Snapshots</title>
+    <style>       
+        {#asset main.css @encoding=utf8}
+    </style>
+</head>
+<body>
+
+    <main class="content__main">
+        <section class="section">
+            <h2>Fundamentals</h2>
+            <div class="nugget__container">
+                <div class="nugget">
+                    <h4 class="mb-1">Airframe Series</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.airframeSeries}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Engine Sub-Series</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.engineSubSeries}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Delivery Date</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.deliveryDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Age</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.age}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Lease</h2>
+            <div class="nugget__container mb-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Lease start date</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.leaseStartDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Lease end date</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.leaseEndDate}}</p>
+                </div>
+                <div class="nugget">
+                    <h4 class="mb-1">Operator</h4>
+                    <p class="h2 fw-normal">{{aircraftDetails.currentOperator}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Cash Security Deposit</h2>
+            <div class="nugget__container mb-4">
+                <div class="nugget">
+                    <h4 class="mb-1">Amount</h4>
+                    <p class="h2 fw-normal">{{leaseSnapshot.cashSecurityDeposit}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="mb-6">
+                <h2 class="mb-4">Maintenance Reserves</h2>
+                
+                {{#each leaseSnapshot.mr.engines}}
+                    <div class="section__sub-1">
+                        <h3 class="h3__no-border mb-2">{{this.esn}}</h3>
+                        <h4 class=" mb-2">PR</h4>
+                        <div class="nugget__container mb-4">
+                            <div class="nugget">
+                                <h4 class="mb-1">Cash Balance</h4>
+                                <p class="h2 fw-normal">{{this.pr.cashBalance}}</p>
+                            </div>
+                            <div class="nugget">
+                                <h4 class="mb-1">Letter of Credit Balance</h4>
+                                <p class="h2 fw-normal">{{this.pr.letterOfCreditBalance}}</p>
+                            </div>
+                        </div>                  
+                        <table class="table">
+                            <tr>
+                                <th class="text-left">Payables</th>
+                                <th class="text-right">On</th>
+                            </tr>
+                            {{#each this.pr.payables}}
+                                <tr>
+                                    <td class="text-left">{{this.value}}</td>
+                                    <td class="text-right">{{this.date}}</td>
+                                </tr>
+                            {{/each}}
+                        </table>                            
+                    </div>
+                    <div class="section__sub-1">
+                        <h4 class=" mb-2">LLP</h4>
+                        <div class="nugget__container mb-4">
+                            <div class="nugget">
+                                <h4 class="mb-1">Cash Balance</h4>
+                                <p class="h2 fw-normal">{{this.llps.cashBalance}}</p>
+                            </div>
+                            <div class="nugget">
+                                <h4 class="mb-1">Letter of Credit Balance</h4>
+                                <p class="h2 fw-normal">{{this.llps.letterOfCreditBalance}}</p>
+                            </div>
+                        </div>                      
+                        <table class="table">
+                            <tr>
+                                <th class="text-left">Payables</th>
+                                <th class="text-right">On</th>
+                            </tr>
+                            {{#each this.llps.payables}}
+                                <tr>
+                                    <td class="text-left">{{this.value}}</td>
+                                    <td class="text-right">{{this.date}}</td>
+                                </tr>
+                            {{/each}}
+                        </table>                
+                    </div>
+                {{/each}}
+
+                {{#each leaseSnapshot.mr.aircraftParts}}
+
+                    <div class="section__sub-1">
+                        <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
+                        {{#each this.checks}}
+                            <h4 class=" mb-2">10 Year Check</h4>
+                            <div class="nugget__container mb-4">
+                                <div class="nugget">
+                                    <h4 class="mb-1">Cash Balance</h4>
+                                    <p class="h2 fw-normal">$450,000</p>
+                                </div>
+                                <div class="nugget">
+                                    <h4 class="mb-1">Letter of Credit Balance</h4>
+                                    <p class="h2 fw-normal">N/A</p>
+                                </div>
+                            </div>
+            
+                            <table class="table">
+                                <tr>
+                                    <th class="text-left">Payables</th>
+                                    <th class="text-right">On</th>
+                                </tr>
+                                {{#each this.payables}}
+                                    <tr>
+                                        <td class="text-left">{{this.value}}</td>
+                                        <td class="text-right">{{this.date}}</td>
+                                    </tr>
+                                {{/each}}
+                            </table>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            </div>
+        </section>
+
+
+
+        <section class="section">
+            <div class="mb-6">
+                <h2 class="mb-4">Lessor Contribution</h2>
+                {{#each leaseSnapshot.lessorContribution.engines}}
+                <div class="section__sub-1">
+                
+                    <h3 class="h3__no-border mb-2">{{this.esn}}</h3>
+                    <h4 class="mb-2">Module PR</h4>
+                    {{#each this.modulesPR}}
+                    
+                    <h5 class="mb-2">{{this.moduleName}}</h5>                    
+                    <table class="table mb-2">
+                        <tr>
+                            <th class="text-left">Payables</th>
+                            <th class="text-right">On</th>
+                            <th class="text-right">At EOL</th>
+                        </tr>
+                        {{#each this.payables}}
+                        <tr>
+                            <td class="text-left">{{this.value}}</td>
+                            <td class="text-right">{{this.date}}</td>
+                            <td class="text-right">{{#if this.atEOL}} YES {{else}} NO {{/if}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    {{/each}}
+                    
+                    <h4 class="mb-2">LLPs</h4>
+                    {{#each this.llps}}
+                    <h5 class="mb-2">{{this.llpName}}</h5>
+                    <p class="mb-2">Claimed: {{#if this.claimed}}YES{{else}}NO{{/if}}</p>
+                    <table class="table">
+                        <tr>
+                            <th class="text-left">Payables</th>
+                            <th class="text-right">On</th>
+                            <th class="text-right">At EOL</th>
+                        </tr>
+                        {{#each this.payables}}
+                        <tr>
+                            <td class="text-left">{{this.value}}</td>
+                            <td class="text-right">{{this.date}}</td>
+                            <td class="text-right">{{#if this.atEOL}}YES{{else}}NO{{/if}}</td>
+                        </tr>
+                        {{/each}}             
+                    </table>
+                    {{/each}}
+                
+                </div>
+                {{/each}}
+
+                {{#each leaseSnapshot.lessorContribution.aircraftParts}}
+                <div class="section__sub-1">
+                    
+                    <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
+                    {{#each this.checks}}
+                    <h4 class="mb-2">{{this.checkName}}</h4>
+                    <table class="table mb-6">
+                                    <tr>
+                                        <th class="text-left">Payables</th>
+                                        <th class="text-right">On</th>
+                                        <th class="text-right">At EOL</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">$100,000</td>
+                                        <td class="text-right">2022-10-01</td>
+                                        <td class="text-right">YES</td>
+                                    </tr>
+                            </td>     
+                    </table>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    
+        
+    </main>
+</body>
+</html>
