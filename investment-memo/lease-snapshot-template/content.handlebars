@@ -67,7 +67,7 @@
                 
                 {{#each leaseSnapshot.mr.engines}}
                     <div class="section__sub-1">
-                        <h3 class="h3__no-border mb-2">Engine {{@index}} - {{this.esn}}</h3>
+                        <h3 class="h3__no-border mb-2">{{this.engineName}}</h3>
                         <h4 class=" mb-2">PR</h4>
                         <div class="nugget__container mb-4">
                             <div class="nugget">
@@ -171,7 +171,7 @@
                 {{#each leaseSnapshot.lessorContribution.engines}}
                 <div class="section__sub-1">
                 
-                    <h3 class="h3__no-border mb-2">{{this.esn}}</h3>
+                    <h3 class="h3__no-border mb-2">{{this.engineName}}</h3>
                     <h4 class="mb-2">Module PR</h4>
                     {{#each this.modulesPR}}
                     
@@ -242,4 +242,18 @@
         {{/if}}
     </main>
 </body>
+<script> 
+    const MAX_PAGE_SIZE = 800 
+    const sections = document.getElementsByClassName("section__sub-1");
+    let runningTotal = 0;
+    for (const section of sections) {
+            const currentElementHeight = section.offsetHeight;
+            if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
+                part.style["page-break-before"] = "always";
+                part.style["background-color"] = "hotpink"
+                runningTotal = 0;
+            }
+            runningTotal += currentElementHeight; 
+    }  
+</script>
 </html>

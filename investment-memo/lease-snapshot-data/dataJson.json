@@ -15,65 +15,76 @@
     "leaseSnapshot": {
         "cashSecurityDeposit": "$1,413,526.00",
         "mr": {
-            "engines": [{
-                "esn": "602624",
-                "pr": {
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
+            "engines": [
+                {
+                    "engineName": "Engine 1 - 602624",
+                    "pr": {
+                        "cashBalance": "$0.00",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
+                    },
+                    "llps": {
+                        "cashBalance": "$0.00",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
+                    }
                 },
-                "llps": {
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
+                {
+                    "engineName": "Engine 2 - 602609",
+                    "pr": {
+                        "cashBalance": "$0.00",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
+                    },
+                    "llps": {
+                        "cashBalance": "$0.00",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
+                    }
                 }
-            }, {
-                "esn": "602609",
-                "pr": {
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
+            ],
+            "aircraftParts": [
+                {
+                    "partName": "Airframe - 43794",
+                    "checks": [
+                        {
+                            "checkName": "12_YEAR_CHECK",
+                            "cashBalance": "$0.00",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "checkName": "9_YEAR_CHECK",
+                            "cashBalance": "$0.00",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
                 },
-                "llps": {
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
+                {
+                    "partName": "APU - P-12576",
+                    "checks": [
+                        {
+                            "checkName": "GENERIC",
+                            "cashBalance": "$0.00",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
+                },
+                {
+                    "partName": "Landing Gears - Group",
+                    "checks": [
+                        {
+                            "checkName": "Generic",
+                            "cashBalance": "$0.00",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
                 }
-            }],
-            "aircraftParts": [{
-                "partName": "airframe - 43794",
-                "checks": [{
-                    "checkName": "12_YEAR_CHECK",
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
-                }, {
-                    "checkName": "9_YEAR_CHECK",
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
-                }]
-            }, {
-                "partName": "apu - P-12576",
-                "checks": [{
-                    "checkName": "GENERIC",
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
-                }]
-            }, {
-                "partName": "Landing Gears - Group",
-                "checks": [{
-                    "checkName": "Generic",
-                    "cashBalance": "$0.00",
-                    "letterOfCreditBalance": "N/A",
-                    "payables": []
-                }]
-            }]
+            ]
         },
-        "lessorContribution": {
-            "engines": [],
-            "aircraftParts": []
-        }
+        "lessorContribution": null
     }
 }
