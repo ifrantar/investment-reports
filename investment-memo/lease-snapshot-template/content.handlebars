@@ -8,6 +8,7 @@
     </style>
 </head>
 <body>
+    {{{pdfCreatePagesGroup title="Lease Snapshot" subtitle="" snapshotAsOf=technicalSnapshot.asOf msn=msn today=today logoImageData=logoImageData deliveryDate=aircraftDetails.deliveryDate airframeSubSeries=aircraftDetails.airframeSubSeries engineSubSeries=aircraftDetails.engineSubSeries}}} 
 
     <main class="content__main">
         <section class="section">
@@ -50,23 +51,25 @@
             </div>
         </section>
 
-        <section class="section">
-            <h2>Cash Security Deposit</h2>
-            <div class="nugget__container mb-4">
-                <div class="nugget">
-                    <h4 class="mb-1">Amount</h4>
-                    <p class="h2 fw-normal">{{leaseSnapshot.cashSecurityDeposit}}</p>
+        {{#if leaseSnapshot.cashSecurityDeposit}}
+            <section class="section">
+                <h2>Cash Security Deposit</h2>
+                <div class="nugget__container mb-4">
+                    <div class="nugget">
+                        <h4 class="mb-1">Amount</h4>
+                        <p class="h2 fw-normal">{{leaseSnapshot.cashSecurityDeposit}}</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        {{/if}}
+        <div style="page-break-before: always"/>
         {{#if leaseSnapshot.mr}}
         <section class="section">
             <div class="mb-6">
                 <h2 class="mb-4">Maintenance Reserves</h2>
                 
                 {{#each leaseSnapshot.mr.engines}}
-                    <div class="section__sub-1">
+                    <div class="section__sub-1 mr-section">
                         <h3 class="h3__no-border mb-2">{{this.engineName}}</h3>
                         <h4 class=" mb-2">PR</h4>
                         <div class="nugget__container mb-4">
@@ -94,7 +97,7 @@
                         </table>    
                         {{/if}}                        
                     </div>
-                    <div class="section__sub-1">
+                    <div class="section__sub-1 mr-section">
                         <h4 class=" mb-2">LLP</h4>
                         <div class="nugget__container mb-4">
                             <div class="nugget">
@@ -125,8 +128,7 @@
                 {{/each}}
 
                 {{#each leaseSnapshot.mr.aircraftParts}}
-
-                    <div class="section__sub-1">
+                    <div class="section__sub-1 mr-section">
                         <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
                         {{#each this.checks}}
                             <h4 class=" mb-2">{{this.checkName}}</h4>
@@ -142,7 +144,7 @@
                             </div>
             
                             {{#if this.payables}}
-                            <table class="table">
+                            <table class="table mb-2">
                                 <tr>
                                     <th class="text-left">Payables</th>
                                     <th class="text-right">On</th>
@@ -162,98 +164,147 @@
         </section>
         {{/if}}
 
-
-
         {{#if leaseSnapshot.lessorContribution}}
+        <div style="page-break-before: always"/>
         <section class="section">
             <div class="mb-6">
                 <h2 class="mb-4">Lessor Contribution</h2>
                 {{#each leaseSnapshot.lessorContribution.engines}}
-                <div class="section__sub-1">
-                
+                {{#if @index}}
+                    <div style="page-break-before: always"/>
+                {{/if}}
+                <div class="section__sub-1 engine-lc-section">
                     <h3 class="h3__no-border mb-2">{{this.engineName}}</h3>
-                    <h4 class="mb-2">Module PR</h4>
+                    <h4 class="mb-2" style="text-decoration: underline;">Module PR</h4>
                     {{#each this.modulesPR}}
-                    
-                    <h5 class="mb-2">{{this.moduleName}}</h5>                    
-                    <table class="table mb-2">
-                        <tr>
-                            <th class="text-left">Payables</th>
-                            <th class="text-right">On</th>
-                            <th class="text-right">At EOL</th>
-                        </tr>
-                        {{#each this.payables}}
-                        <tr>
-                            <td class="text-left">{{this.value}}</td>
-                            <td class="text-right">{{this.date}}</td>
-                            <td class="text-right">{{#if this.atEOL}} YES {{else}} NO {{/if}}</td>
-                        </tr>
-                        {{/each}}
-                    </table>
-                    {{/each}}
-                    
-                    <h4 class="mb-2">LLPs</h4>
-                    {{#each this.llps}}
-                    <h5 class="mb-2">{{this.llpName}}</h5>
-                    <p class="mb-2">Claimed: {{#if this.claimed}}YES{{else}}NO{{/if}}</p>
-                    <table class="table">
-                        <tr>
-                            <th class="text-left">Payables</th>
-                            <th class="text-right">On</th>
-                            <th class="text-right">At EOL</th>
-                        </tr>
-                        {{#each this.payables}}
-                        <tr>
-                            <td class="text-left">{{this.value}}</td>
-                            <td class="text-right">{{this.date}}</td>
-                            <td class="text-right">{{#if this.atEOL}}YES{{else}}NO{{/if}}</td>
-                        </tr>
-                        {{/each}}             
-                    </table>
-                    {{/each}}
-                
-                </div>
-                {{/each}}
-
-                {{#each leaseSnapshot.lessorContribution.aircraftParts}}
-                <div class="section__sub-1">
-                    
-                    <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
-                    {{#each this.checks}}
-                    <h4 class="mb-2">{{this.checkName}}</h4>
-                    <table class="table mb-6">
+                        <div class="lc-section"/>
+                            <h5 class="mb-2">{{this.moduleName}}</h5>        
+                            {{#if this.payables}}
+                                <table class="table mb-2">
                                     <tr>
                                         <th class="text-left">Payables</th>
                                         <th class="text-right">On</th>
                                         <th class="text-right">At EOL</th>
                                     </tr>
-                                    <tr>
-                                        <td class="text-left">$100,000</td>
-                                        <td class="text-right">2022-10-01</td>
-                                        <td class="text-right">YES</td>
-                                    </tr>
-                            </td>     
-                    </table>
+                                    {{#each this.payables}}
+                                        <tr>
+                                            <td class="text-left">{{this.value}}</td>
+                                            <td class="text-right">{{this.date}}</td>
+                                            <td class="text-right">{{#if this.atEOL}} YES {{else}} NO {{/if}}</td>
+                                        </tr>
+                                    {{/each}}
+                                </table>
+                            {{else}}
+                                <p class="mb-2" style="font-style: italic">Payables: None</p>
+                            {{/if}}
+                        </div>
                     {{/each}}
+                    
+                    {{#if this.llps}}
+                    <h4 class="mb-2" style="text-decoration: underline;">LLPs</h4>
+                    {{#each this.llps}}
+                        <div class="lc-section">
+                            <h5 class="mb-2">{{this.llpName}}</h5>
+                            <p class="mb-2">Claimed: {{#if this.claimed}}YES{{else}}NO{{/if}}</p>
+                            {{#if this.payables}}
+                                <table class="table">
+                                    <tr>
+                                        <th class="text-left">Payables</th>
+                                        <th class="text-right">On</th>
+                                        <th class="text-right">At EOL</th>
+                                    </tr>
+                                    {{#each this.payables}}
+                                        <tr>
+                                            <td class="text-left">{{this.value}}</td>
+                                            <td class="text-right">{{this.date}}</td>
+                                            <td class="text-right">{{#if this.atEOL}}YES{{else}}NO{{/if}}</td>
+                                        </tr>
+                                    {{/each}}             
+                                </table>
+                            {{else}}
+                                <p class="mb-2" style="font-style: italic">Payables: None</p>
+                            {{/if}}
+                        </div>
+                    {{/each}}
+                    {{/if}}
+                
                 </div>
                 {{/each}}
+
+                {{#if leaseSnapshot.lessorContribution}}
+                    <div style="page-break-before: always" class="aircraft-part-lc-section">
+                    {{#each leaseSnapshot.lessorContribution.aircraftParts}}
+                        <div class="section__sub-1 lc-section">
+                            <h3 class="h3__no-border mb-2">{{this.partName}}</h3>
+                            {{#each this.checks}}
+                                <h4 class="mb-2">{{this.checkName}}</h4>
+                                {{#if this.payables}}
+                                    <table class="table mb-6">
+                                        <tr>
+                                            <th class="text-left">Payables</th>
+                                            <th class="text-right">On</th>
+                                            <th class="text-right">At EOL</th>
+                                        </tr>
+                                        {{#each this.payables}}
+                                            <tr>
+                                                <td class="text-left">{{this.value}}</td>
+                                                <td class="text-right">{{this.date}}</td>
+                                                <td class="text-right">{{#if this.atEOL}}YES{{else}}NO{{/if}}</td>
+                                            </tr>
+                                        {{/each}}
+                                    </table>
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    {{/each}}
+                    </div>
+                {{/if}}
             </div>
         </section>
         {{/if}}
     </main>
 </body>
 <script> 
-    const MAX_PAGE_SIZE = 800 
-    const sections = document.getElementsByClassName("section__sub-1");
+    let MAX_PAGE_SIZE = 700 
+    const mrSections = document.getElementsByClassName("mr-section");
     let runningTotal = 0;
-    for (const section of sections) {
+    for (const section of mrSections) {
             const currentElementHeight = section.offsetHeight;
             if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
-                part.style["page-break-before"] = "always";
-                part.style["background-color"] = "hotpink"
+                section.style["page-break-before"] = "always";
                 runningTotal = 0;
             }
             runningTotal += currentElementHeight; 
-    }  
+    }
+
+    MAX_PAGE_SIZE = 500
+    const engineLcSections = document.getElementsByClassName("engine-lc-section");
+    for (const section of engineLcSections) {
+        const subSections = section.getElementsByClassName("lc-section");
+        runningTotal = 0
+        for (const subSection of subSections) {
+            const currentElementHeight = subSection.offsetHeight;
+            if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
+                subSection.style["page-break-before"] = "always";
+                runningTotal = 0;
+            } 
+            runningTotal += currentElementHeight;
+        }
+    }
+
+    MAX_PAGE_SIZE=600
+    const partLcSections = document.getElementsByClassName("aircraft-part-lc-section");
+    for (const section of partLcSections) {
+        const subSections = section.getElementsByClassName("lc-section");
+        runningTotal = 0
+        for (const subSection of subSections) {
+            const currentElementHeight = subSection.offsetHeight;
+            if ((runningTotal + currentElementHeight) > MAX_PAGE_SIZE) {
+                subSection.style["page-break-before"] = "always";
+                runningTotal = 0;
+            } 
+            runningTotal += currentElementHeight;
+        }
+    }
 </script>
 </html>
