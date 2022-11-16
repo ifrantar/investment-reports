@@ -13,6 +13,7 @@
         "leaseEndDate": "2030-08-01"
     },
     "leaseSnapshot": {
+        "asOf": "2022-11-16",
         "cashSecurityDeposit": "N/A",
         "mr": {
             "engines": [
