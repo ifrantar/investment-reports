@@ -1,463 +1,185 @@
 {
-    "msn": "9999",
-    "today": "November 14th, 2022",
+    "msn": "4130",
+    "today": "December 1st, 2022",
     "logoImageData": "data:image/png;base64,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FTOBYQpnIKu26Klsz2QFy1snzDSGE1HF7o8fk+vpUxREQqeKPM1hnWSBE4CXFXop+4RtVHN7LYbDFcqglxEz67EFn894ntCu1vpfGMMUoFdBfV/vmPjLrygMImXvUuB/FQZRwgZEbHQC6kcV1KpBlVyVrZV1tdbflbDm88AKhRaARxcsmKSnjiLlrRWYrjCIErb3JbZRGIMxcPYzs+pey+Y6n59T96feRNU4a5hf9vE1zNFRJlLW5uJehaqPryhh+/8fx4j6BgSKl5nV1Vafk1pAK+bu+/by1vrJYL9K2T5tMy/2bL52ro40kbJkgSuAZlA/VlHC9iFRs+E3qNP7QK8ld271z3jOZ4Hobpvwm94t1tZiOB9YVUYB7ktE7PErZh6q/nwi5WclcChwAXqyJiUoK33PYs0dNwKnKpwpxTHm4u5dx1/OdJPXaVHGND80OMEmzRZ7OjCqlGNsjJna1Vqn16Ei4TUEeCfL61yFm9B9BvCuQixK2NIYN+2pTXvWvXs32EMU0o952BrOXd5a/0xhN8OaUcd2jo/Ezdcw9qvAiBKK8d+NTRzXNadhkQ43kdB7k8zLQMVx84rOww0uWKuwihK2AWpsnB9dvsk238RyCpg9gGiZxnQtmGcMicU2EZnTPbdueRg3cvTU9j0SicjnjGW0hTFgRoIdBmxWPHHmCay5o3fYmja9BhUpGscBMxn41Ho9wD+AfwLPAU8AHcBrCqUoYctQrLF7UKTyzbKb53LQkE16n7517yJ/JG/N6GOWbBHqOG/oSTy94Itv6fQVKVrvzR3anzVo/k8REREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREJsf8Dt4QEjLXayGsAAAAASUVORK5CYII=",
     "aircraftDetails": {
-        "airframeSeries": "A330-300E",
-        "airframeSubSeries": "A330-343E",
-        "engineSubSeries": "Trent 772B-60EP",
-        "deliveryDate": "2015-02-03",
-        "age": 7.8,
-        "currentOperator": "Lucky Air",
-        "leaseStartDate": "2016-12-01",
-        "leaseEndDate": "2030-08-01"
+        "airframeSeries": "DHC-8-400 (Q400)",
+        "airframeSubSeries": "DHC-8-402 (Q400)",
+        "engineSubSeries": "PW150A",
+        "deliveryDate": "2006-08-29",
+        "age": 16.3,
+        "currentOperator": "Porter Airlines",
+        "leaseStartDate": "2021-12-22",
+        "leaseEndDate": "2028-12-21"
     },
     "leaseSnapshot": {
-        "asOf": "2022-11-16",
-        "cashSecurityDeposit": "N/A",
+        "asOf": "2022-10-31",
+        "cashSecurityDeposit": "$150,000.00",
         "mr": {
             "engines": [
                 {
-                    "engineName": "Engine 1 - 12345",
-                    "pr": {
-                        "cashBalance": "$1,200.00",
-                        "letterOfCreditBalance": "$10,000.00",
-                        "payables": [
-                            {
-                                "value": "$100.00",
-                                "date": "2022-11-14"
-                            },
-                            {
-                                "value": "$100.00",
-                                "date": "2022-11-15"
-                            },
-                            {
-                                "value": "$100.00",
-                                "date": "2022-11-16"
-                            },
-                            {
-                                "value": "$100.00",
-                                "date": "2022-11-17"
-                            }
-                        ]
-                    },
+                    "engineName": "Engine 1 - FA0302",
+                    "groupedPr": null,
+                    "modulePr": [
+                        {
+                            "moduleName": "COLD_SECTION",
+                            "cashBalance": "$23,197.74",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "moduleName": "RGB",
+                            "cashBalance": "$4,832.87",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "moduleName": "HOT_SECTION",
+                            "cashBalance": "$62,827.22",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ],
                     "llps": {
-                        "cashBalance": "$1,200.00",
-                        "letterOfCreditBalance": "$10,000.00",
-                        "payables": [
-                            {
-                                "value": "$120.00",
-                                "date": "2022-11-14"
-                            },
-                            {
-                                "value": "$120.00",
-                                "date": "2022-11-15"
-                            },
-                            {
-                                "value": "$120.00",
-                                "date": "2022-11-16"
-                            },
-                            {
-                                "value": "$110.00",
-                                "date": "2022-11-17"
-                            }
-                        ]
+                        "cashBalance": "$13,848.32",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
                     }
                 },
                 {
-                    "engineName": "Engine 2 - 12346",
-                    "pr": {
-                        "cashBalance": "$950.00",
-                        "letterOfCreditBalance": "$800.00",
-                        "payables": [
-                            {
-                                "value": "$125.00",
-                                "date": "2022-11-14"
-                            }
-                        ]
-                    },
+                    "engineName": "Engine 2 - FA0303",
+                    "groupedPr": null,
+                    "modulePr": [
+                        {
+                            "moduleName": "COLD_SECTION",
+                            "cashBalance": "$34,353.39",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "moduleName": "RGB",
+                            "cashBalance": "$7,156.96",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "moduleName": "HOT_SECTION",
+                            "cashBalance": "$93,040.42",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ],
                     "llps": {
-                        "cashBalance": "$950.00",
-                        "letterOfCreditBalance": "$800.00",
-                        "payables": [
-                            {
-                                "value": "$250.00",
-                                "date": "2022-11-14"
-                            }
-                        ]
+                        "cashBalance": "$21,427.20",
+                        "letterOfCreditBalance": "N/A",
+                        "payables": []
                     }
                 }
             ],
             "aircraftParts": [
                 {
-                    "partName": "Airframe - null",
+                    "partName": "Airframe - 4130",
                     "checks": [
                         {
-                            "checkName": "6_YEAR_CHECK",
-                            "cashBalance": "$1,500.00",
-                            "letterOfCreditBalance": "$0.00",
-                            "payables": [
-                                {
-                                    "value": "$30.00",
-                                    "date": "2022-11-14"
-                                }
-                            ]
+                            "checkName": "6Y",
+                            "cashBalance": "$11,876.60",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
                         },
                         {
-                            "checkName": "12_YEAR_CHECK",
-                            "cashBalance": "$150.00",
-                            "letterOfCreditBalance": "$0.00",
-                            "payables": [
-                                {
-                                    "value": "$37.00",
-                                    "date": "2022-11-14"
-                                },
-                                {
-                                    "value": "$85.00",
-                                    "date": "2022-11-15"
-                                }
-                            ]
+                            "checkName": "9Y",
+                            "cashBalance": "$12,866.32",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "checkName": "40_000_FC",
+                            "cashBalance": "$7,639.40",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "checkName": "2Y",
+                            "cashBalance": "$64,331.61",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        },
+                        {
+                            "checkName": "C_CHECK",
+                            "cashBalance": "$0.00",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
                         }
                     ]
                 },
                 {
-                    "partName": "APU - null",
+                    "partName": "APU - SP-E074705",
                     "checks": [
                         {
-                            "checkName": "CHECK_1",
-                            "cashBalance": "$60.00",
-                            "letterOfCreditBalance": "$0.00",
-                            "payables": [
-                                {
-                                    "value": "$70.00",
-                                    "date": "2022-11-14"
-                                }
-                            ]
+                            "checkName": "GENERIC",
+                            "cashBalance": "$8,273.42",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
                         }
                     ]
                 },
                 {
-                    "partName": "Landing Gears - Group",
+                    "partName": "Landing Gear - MAL-SP-0335",
                     "checks": [
                         {
-                            "checkName": "Generic",
-                            "cashBalance": "$90.00",
-                            "letterOfCreditBalance": "$40.00",
-                            "payables": [
-                                {
-                                    "value": "$90.00",
-                                    "date": "2022-11-14"
-                                },
-                                {
-                                    "value": "$9.00",
-                                    "date": "2022-11-15"
-                                },
-                                {
-                                    "value": "$4.00",
-                                    "date": "2022-11-16"
-                                }
-                            ]
+                            "checkName": "GENERIC",
+                            "cashBalance": "$5,733.04",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
+                },
+                {
+                    "partName": "Landing Gear - MA0749",
+                    "checks": [
+                        {
+                            "checkName": "GENERIC",
+                            "cashBalance": "$12,986.98",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
+                },
+                {
+                    "partName": "Landing Gear - MA1210",
+                    "checks": [
+                        {
+                            "checkName": "GENERIC",
+                            "cashBalance": "$12,986.98",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
+                },
+                {
+                    "partName": "Propeller Hubs - DAP0296",
+                    "checks": [
+                        {
+                            "checkName": "GENERIC",
+                            "cashBalance": "$9,695.61",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
+                        }
+                    ]
+                },
+                {
+                    "partName": "Propeller Hubs - DAP0433",
+                    "checks": [
+                        {
+                            "checkName": "GENERIC",
+                            "cashBalance": "$9,695.61",
+                            "letterOfCreditBalance": "N/A",
+                            "payables": []
                         }
                     ]
                 }
             ]
         },
-        "lessorContribution": {
-            "engines": [
-                {
-                    "engineName": "Engine 1 - 12345",
-                    "modulesPR": [
-                        {
-                            "moduleName": "FAN",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "HOT_SECTION",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "LPT",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "GEARBOX",
-                            "payables": []
-                        }
-                    ],
-                    "llps": [
-                        {
-                            "llpName": "BOOSTER_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FAN_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FAN_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "CDP_SEAL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FRONT_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_1_2_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_4_9_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FRONT_AIR_SEAL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "REAR_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "CONICAL_SUPPORT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_1_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_2_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_3_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_4_DISK",
-                            "claimed": false,
-                            "payables": []
-                        }
-                    ]
-                },
-                {
-                    "engineName": "Engine 2 - 12346",
-                    "modulesPR": [
-                        {
-                            "moduleName": "FAN",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "HOT_SECTION",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "LPT",
-                            "payables": []
-                        },
-                        {
-                            "moduleName": "GEARBOX",
-                            "payables": []
-                        }
-                    ],
-                    "llps": [
-                        {
-                            "llpName": "BOOSTER_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FAN_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FAN_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "CDP_SEAL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FRONT_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_1_2_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_4_9_SPOOL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "FRONT_AIR_SEAL",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "REAR_SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "CONICAL_SUPPORT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "SHAFT",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_1_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_2_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_3_DISK",
-                            "claimed": false,
-                            "payables": []
-                        },
-                        {
-                            "llpName": "STAGE_4_DISK",
-                            "claimed": false,
-                            "payables": []
-                        }
-                    ]
-                }
-            ],
-            "aircraftParts": [
-                {
-                    "partName": "Airframe - null",
-                    "checks": [
-                        {
-                            "checkName": "6_YEAR_CHECK",
-                            "payables": [
-                                {
-                                    "value": "$1,500.00",
-                                    "date": "2022-11-14",
-                                    "atEOL": true
-                                },
-                                {
-                                    "value": "$12,500.00",
-                                    "date": "2022-11-15",
-                                    "atEOL": true
-                                },
-                                {
-                                    "value": "$160.00",
-                                    "date": "2022-11-16",
-                                    "atEOL": true
-                                }
-                            ]
-                        },
-                        {
-                            "checkName": "12_YEAR_CHECK",
-                            "payables": [
-                                {
-                                    "value": "$10.00",
-                                    "date": "2022-11-14",
-                                    "atEOL": false
-                                },
-                                {
-                                    "value": "$250.00",
-                                    "date": "2022-11-15",
-                                    "atEOL": false
-                                },
-                                {
-                                    "value": "$40.00",
-                                    "date": "2022-11-16",
-                                    "atEOL": false
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "partName": "APU - null",
-                    "checks": [
-                        {
-                            "checkName": "CHECK_1",
-                            "payables": [
-                                {
-                                    "value": "$70.00",
-                                    "date": "2022-11-14",
-                                    "atEOL": false
-                                },
-                                {
-                                    "value": "$80.00",
-                                    "date": "2022-11-15",
-                                    "atEOL": false
-                                },
-                                {
-                                    "value": "$30.00",
-                                    "date": "2022-11-16",
-                                    "atEOL": true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "partName": "Landing Gear - null",
-                    "checks": [
-                        {
-                            "checkName": "CHECK_1",
-                            "payables": [
-                                {
-                                    "value": "$550.00",
-                                    "date": "2022-11-14",
-                                    "atEOL": false
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
+        "lessorContribution": null
     }
 }

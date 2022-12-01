@@ -71,34 +71,64 @@
                 {{#each leaseSnapshot.mr.engines}}
                     <div class="section__sub-1 mr-section">
                         <h3 class="h3__no-border mb-2">{{this.engineName}}</h3>
-                        <h4 class=" mb-2">PR</h4>
-                        <div class="nugget__container mb-4">
-                            <div class="nugget">
-                                <h4 class="mb-1">Cash Balance</h4>
-                                <p class="h2 fw-normal">{{this.pr.cashBalance}}</p>
+                        {{#if this.groupedPr}}
+                            <h4 class=" mb-2">Grouped PR</h4>
+                            <div class="nugget__container mb-4">
+                                <div class="nugget">
+                                    <h4 class="mb-1">Cash Balance</h4>
+                                    <p class="h2 fw-normal">{{this.pr.cashBalance}}</p>
+                                </div>
+                                <div class="nugget">
+                                    <h4 class="mb-1">Letter of Credit Balance</h4>
+                                    <p class="h2 fw-normal">{{this.pr.letterOfCreditBalance}}</p>
+                                </div>
                             </div>
-                            <div class="nugget">
-                                <h4 class="mb-1">Letter of Credit Balance</h4>
-                                <p class="h2 fw-normal">{{this.pr.letterOfCreditBalance}}</p>
-                            </div>
-                        </div>
-                        {{#if this.pr.payables}}                 
-                        <table class="table">
-                            <tr>
-                                <th class="text-left">Payables</th>
-                                <th class="text-right">On</th>
-                            </tr>
-                            {{#each this.pr.payables}}
+                            {{#if this.pr.payables}}                 
+                            <table class="table">
                                 <tr>
-                                    <td class="text-left">{{this.value}}</td>
-                                    <td class="text-right">{{this.date}}</td>
+                                    <th class="text-left">Payables</th>
+                                    <th class="text-right">On</th>
                                 </tr>
-                            {{/each}}
-                        </table>    
-                        {{/if}}                        
+                                {{#each this.pr.payables}}
+                                    <tr>
+                                        <td class="text-left">{{this.value}}</td>
+                                        <td class="text-right">{{this.date}}</td>
+                                    </tr>
+                                {{/each}}
+                            </table>    
+                            {{/if}}
+                        {{/if}}
+                        {{#each this.modulePr}}
+                            <h4 class=" mb-2">{{this.moduleName}}</h4>
+                            <div class="nugget__container mb-4">
+                                <div class="nugget">
+                                    <h4 class="mb-1">Cash Balance</h4>
+                                    <p class="h2 fw-normal">{{this.cashBalance}}</p>
+                                </div>
+                                <div class="nugget">
+                                    <h4 class="mb-1">Letter of Credit Balance</h4>
+                                    <p class="h2 fw-normal">{{this.letterOfCreditBalance}}</p>
+                                </div>
+                            </div>
+                            {{#if this.payables}}                 
+                            <table class="table">
+                                <tr>
+                                    <th class="text-left">Payables</th>
+                                    <th class="text-right">On</th>
+                                </tr>
+                                {{#each this.payables}}
+                                    <tr>
+                                        <td class="text-left">{{this.value}}</td>
+                                        <td class="text-right">{{this.date}}</td>
+                                    </tr>
+                                {{/each}}
+                            </table>    
+                            {{/if}}
+                        {{/each}}
+                                                
                     </div>
                     <div class="section__sub-1 mr-section">
-                        <h4 class=" mb-2">LLP</h4>
+                        <h4 class=" mb-2">LLP Stack</h4>
                         <div class="nugget__container mb-4">
                             <div class="nugget">
                                 <h4 class="mb-1">Cash Balance</h4>
