@@ -135,10 +135,10 @@
                 {{#each this.checkRates}}
                 <tr>
                     <td class="">{{this.checkName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                 </tr>
                 {{/each}}
             </table>
@@ -156,10 +156,10 @@
                 {{#each contractedLeaseSummary.maintenanceCompensation.mr.enginePr}}
                 <tr>
                     <td class="w-200">{{this.moduleName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                 </tr>
                 {{/each}}
             </table>
@@ -176,10 +176,10 @@
                 {{#each contractedLeaseSummary.maintenanceCompensation.mr.engineLlps}}
                 <tr>
                     <td style="w-200">{{this.llpName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                 </tr>
                 {{/each}}
             </table>
@@ -202,10 +202,10 @@
                 {{#each this.checkRates}}
                 <tr>
                     <td style="width:150px">{{this.checkName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                     <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
                 </tr>
                 {{/each}}
@@ -225,10 +225,10 @@
                 {{#each contractedLeaseSummary.maintenanceCompensation.eol.enginePr}}
                 <tr>
                     <td style="width:150px">{{this.moduleName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                     <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
                 </tr>
                 {{/each}}
@@ -247,10 +247,10 @@
                 {{#each contractedLeaseSummary.maintenanceCompensation.eol.engineLlps}}
                 <tr>
                     <td style="width:150px">{{this.llpName}}</td>
-                    <td class="text-right">{{this.rate}}</td>
-                    <td class="text-right">{{this.asOf}}</td>
-                    <td class="text-right">{{this.escalation}}</td>
-                    <td class="text-right">{{this.metric}}</td>
+                    <td class="text-right">{{#if this.industryRates}}Industry Rates{{else}}{{this.specifiedRate.rate}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.asOf}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.escalation}}{{/if}}</td>
+                    <td class="text-right">{{#if this.industryRates}}N/A{{else}}{{this.specifiedRate.metric}}{{/if}}</td>
                     <td class="text-right">{{#if this.mirrored}}Yes{{else}}No{{/if}}</td>
                 </tr>
                 {{/each}}
